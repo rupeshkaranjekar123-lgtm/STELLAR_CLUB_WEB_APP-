@@ -47,7 +47,7 @@ export default function Membership() {
         </div>
         <div className="relative z-10 text-center px-4 fade-in mt-16">
           <h1 className="text-5xl md:text-6xl font-serif text-white mb-4">Membership</h1>
-          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-sm">Join The Elite 100</p>
+          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-sm">Not Just a Club — A Lifestyle</p>
         </div>
       </section>
 

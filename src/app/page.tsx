@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Star, Shield, Users, ArrowRight, ChevronDown, Check, Award } from 'lucide-react';
+import { Star, Shield, Users, ArrowRight, ChevronDown, Check, Award, ArrowLeft } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -202,20 +202,107 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* Membership Benefits Highlights */}
+          <div className="mt-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
+            {[
+              { 
+                title: "Private Community", 
+                desc: "Strictly limited to 100 elite families to ensure an uncrowded and private atmosphere.",
+                icon: <Shield className="w-6 h-6 text-[#D4AF37]" />
+              },
+              { 
+                title: "Family First", 
+                desc: "Privileges extend to your spouse, children, and parents under a single membership.",
+                icon: <Star className="w-6 h-6 text-[#D4AF37]" />
+              },
+              { 
+                title: "Bespoke Hospitality", 
+                desc: "Experience personalized service with a dedicated concierge for every member.",
+                icon: <Shield className="w-6 h-6 text-[#D4AF37]" />
+              },
+              { 
+                title: "Global Access", 
+                desc: "Reciprocal privileges at over 170+ premium private clubs across the globe.",
+                icon: <Star className="w-6 h-6 text-[#D4AF37]" />
+              }
+            ].map((benefit, i) => (
+              <div key={i} className="group">
+                <div className="mb-6 p-3 w-max rounded-lg bg-[#D4AF37]/5 group-hover:bg-[#D4AF37]/10 transition-colors">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-serif text-white mb-4 group-hover:text-[#D4AF37] transition-colors">{benefit.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed font-light">
+                  {benefit.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Membership Call to Action */}
+          <div className="mt-24 pt-20 border-t border-white/5 text-center">
+            <p className="text-[#D4AF37] text-xs mb-8 uppercase tracking-[0.4em] font-semibold">Join Nagpur's Most Elite Circle</p>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center gap-4 text-white hover:text-[#D4AF37] transition-all group font-serif text-3xl md:text-4xl"
+            >
+              Start Your Application <ArrowRight className="w-8 h-8 group-hover:translate-x-3 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Brand Partners / Association Marquee */}
-      <section className="py-20 border-t border-b border-white/10 bg-black overflow-hidden">
-        <div className="text-center mb-10">
-          <p className="text-white/40 uppercase tracking-widest text-xs">Proudly Affiliated With</p>
+
+      {/* Auto Scrolling Image Gallery Section */}
+      <section className="py-24 bg-[#050505] overflow-hidden">
+        <div className="text-center mb-16">
+          <Shield className="w-8 h-8 text-[#D4AF37] mx-auto mb-4 opacity-80" />
+          <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Life at Stellaar</h2>
+          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">A Glimpse of the Extraordinary</p>
         </div>
-        <div className="flex justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-          <div className="text-2xl font-serif tracking-widest">REFORMS CLUB</div>
-          <div className="w-1 h-1 rounded-full bg-white/50"></div>
-          <div className="text-2xl font-serif tracking-widest">AMRAVATI</div>
-          <div className="w-1 h-1 rounded-full bg-white/50"></div>
-          <div className="text-2xl font-serif tracking-widest">EST. 1902</div>
+        
+        {/* Scrolling wrapper */}
+        <div className="w-full overflow-hidden flex">
+          <div className="animate-marquee flex gap-6 pr-6 w-max [animation-duration:40s] hover:[animation-play-state:paused]">
+            {[
+              '/images/gallery-1.jpg',
+              '/images/gallery-2.jpg',
+              '/images/gallery-3.jpg',
+              '/images/gallery-4.jpg',
+              '/images/gallery-5.jpg',
+              '/images/pool.jpg',
+              '/images/dining.jpg',
+              '/images/exterior.jpg',
+              // DUPLICATE for seamless loop
+              '/images/gallery-1.jpg',
+              '/images/gallery-2.jpg',
+              '/images/gallery-3.jpg',
+              '/images/gallery-4.jpg',
+              '/images/gallery-5.jpg',
+              '/images/pool.jpg',
+              '/images/dining.jpg',
+              '/images/exterior.jpg',
+            ].map((img, i) => (
+              <div key={i} className="min-w-[280px] h-[350px] md:min-w-[400px] md:h-[500px] flex-shrink-0 relative overflow-hidden group/img cursor-pointer">
+                <img 
+                  src={img} 
+                  alt={`Stellaar Life ${i}`} 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover/img:bg-black/10 transition-colors duration-500"></div>
+                <div className="absolute inset-0 border border-[#D4AF37]/0 group-hover/img:border-[#D4AF37]/30 transition-colors duration-500 m-4"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Brand Tagline Section */}
+      <section className="py-24 bg-black text-center border-t border-white/10">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white tracking-[0.1em] opacity-90 leading-tight">
+            Not Just a Club — <span className="text-[#D4AF37]">A Lifestyle.</span>
+          </h2>
         </div>
       </section>
 
