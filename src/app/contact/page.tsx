@@ -31,7 +31,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-white text-lg font-serif mb-1">Our Location</h4>
-                    <p className="text-white/60 text-sm">Central Nagpur,<br/>Maharashtra, India</p>
+                    <p className="text-white/60 text-sm leading-relaxed">Backside of Haldirams, Prashant Nagar,<br/>In front of FCI Godown, Ajni,<br/>Nagpur, Maharashtra 440015.</p>
                   </div>
                 </div>
 
@@ -41,7 +41,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-white text-lg font-serif mb-1">Phone</h4>
-                    <p className="text-white/60 text-sm">+91 98765 43210<br/>+91 98765 43211</p>
+                    <p className="text-white/60 text-sm">+91 7888005995<br/>+91 8668647116</p>
                   </div>
                 </div>
 
@@ -59,7 +59,7 @@ export default function Contact() {
               {/* WhatsApp Button */}
               <div className="pt-8 border-t border-white/10">
                 <a 
-                  href="https://wa.me/919876543210" 
+                  href="https://wa.me/917888005995" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white font-semibold rounded-sm hover:bg-[#1EBE5D] transition-colors"

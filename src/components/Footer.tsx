@@ -30,7 +30,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed text-white/60">
-              Nagpur's most exclusive premium family club. Limited to 100 members. Experience luxury, wellness, and elite networking.
+              Nagpur&apos;s most exclusive premium family club. Limited to 100 members. Experience luxury, wellness, and elite networking.
             </p>
             <div className="flex gap-4">
               <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37]/60 hover:text-[#D4AF37] hover:border-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all">
@@ -71,11 +71,11 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0" />
-                <span>Central Nagpur, Maharashtra, India</span>
+                <span className="leading-tight">Backside of Haldirams, Prashant Nagar, <br />In front of FCI Godown, Ajni, <br />Nagpur, Maharashtra 440015.</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Phone className="w-5 h-5 text-[#D4AF37] shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>+91 7888005995, +91 8668647116</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Mail className="w-5 h-5 text-[#D4AF37] shrink-0" />

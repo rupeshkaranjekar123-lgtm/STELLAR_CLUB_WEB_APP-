@@ -46,10 +46,10 @@ export default function Gallery() {
         <div className="container mx-auto max-w-4xl text-center mb-16">
           <div className="w-16 h-[1px] bg-[#D4AF37] mx-auto mb-8"></div>
           <h2 className="text-2xl md:text-3xl font-serif text-white mb-6 leading-relaxed">
-            "Step into a world where every detail is curated for perfection."
+            &quot;Step into a world where every detail is curated for perfection.&quot;
           </h2>
           <p className="text-white/60 font-light text-lg leading-relaxed mb-6">
-            Welcome to the visual tour of The Stellaar. As Nagpur's first premium vertical family club, our 
+            Welcome to the visual tour of The Stellaar. As Nagpur&apos;s first premium vertical family club, our 
             facilities span across multiple floors of uncompromised luxury. From our state-of-the-art wellness 
             centers and temperature-controlled swimming pools to our exclusive fine-dining restaurants and 
             private boardrooms, every space is designed to cater to the highest standards of our 100 member families.

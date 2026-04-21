@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Star, Shield, Users, ArrowRight, ChevronDown, Check, Award, ArrowLeft } from 'lucide-react';
+import LocationSection from '@/components/LocationSection';
+import { Star, Shield, Users, ArrowRight, ChevronDown, Check, Award } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -11,17 +12,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="/images/dining.jpg" 
-            alt="The Stellaar Dining" 
+          <img
+            src="/images/dining.png"
+            alt="The Stellaar Dining"
             className="w-full h-full object-cover opacity-70 scale-105 animate-[kenburns_15s_ease-in-out_infinite_alternate]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black"></div>
         </div>
-        
+
         <div className="relative z-10 text-center px-4 max-w-5xl fade-in mt-10">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-6 leading-tight drop-shadow-2xl">
-            Exclusive Premium <br/> Family Club
+            Exclusiv Premium <br /> Family Club
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto font-light tracking-wide leading-relaxed">
             Where luxury meets lifestyle. Experience unparalleled amenities, elite networking, and 5-star hospitality in the heart of Nagpur.
@@ -31,15 +32,15 @@ export default function Home() {
             <span className="text-[#D4AF37] text-xs tracking-[0.3em] uppercase font-semibold">Limited to Only 100 Members</span>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link 
-              href="/membership" 
+            <Link
+              href="/membership"
               className="group relative px-10 py-4 bg-gradient-to-r from-[#D4AF37] to-[#B5952F] text-black transition-all duration-500 uppercase tracking-widest text-sm font-semibold w-full sm:w-auto text-center overflow-hidden"
             >
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
               <span className="relative z-10 group-hover:text-black">Join Membership</span>
             </Link>
-            <Link 
-              href="/about" 
+            <Link
+              href="/about"
               className="px-10 py-4 border border-white/30 text-white hover:border-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all duration-500 uppercase tracking-widest text-sm w-full sm:w-auto text-center backdrop-blur-sm"
             >
               Explore More
@@ -55,13 +56,13 @@ export default function Home() {
       {/* Marquee Banner */}
       <div className="w-full bg-[#D4AF37] text-black py-3 overflow-hidden flex whitespace-nowrap">
         <div className="animate-marquee flex items-center gap-8 font-semibold uppercase tracking-widest text-xs min-w-max pr-8">
-          <span>NAGPUR'S FIRST PREMIUM VERTICAL FAMILY CLUB</span>
+          <span>NAGPUR&apos;S FIRST PREMIUM VERTICAL FAMILY CLUB</span>
           <span>•</span>
           <span>FITNESS, FUN & LIFESTYLE UNDER ONE ROOF</span>
           <span>•</span>
           <span>AFFILIATION WITH 170+ ELITE CLUBS WORLDWIDE</span>
           <span>•</span>
-          <span>NAGPUR'S FIRST PREMIUM VERTICAL FAMILY CLUB</span>
+          <span>NAGPUR&apos;S FIRST PREMIUM VERTICAL FAMILY CLUB</span>
           <span>•</span>
           <span>FITNESS, FUN & LIFESTYLE UNDER ONE ROOF</span>
           <span>•</span>
@@ -79,12 +80,12 @@ export default function Home() {
                 <span className="w-8 h-[1px] bg-[#D4AF37]"></span> The Vision
               </h4>
               <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight">
-                A Legacy of <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#FFF3B0]">Luxury</span>
+                A Legacy of <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#FFF3B0]">Luxury</span>
               </h2>
               <p className="text-white/60 leading-relaxed font-light text-lg">
                 The Stellaar is not just a club; it is a statement. Designed for the elite few, we offer a sanctuary where families can bond, professionals can network, and individuals can rejuvenate in absolute luxury.
               </p>
-              
+
               <div className="pt-6 space-y-5">
                 {[
                   { icon: Shield, text: "Strictly curated member community" },
@@ -97,7 +98,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              
+
               <div className="pt-8">
                 <Link href="/about" className="group inline-flex items-center gap-3 text-[#D4AF37] transition-all uppercase tracking-widest text-sm font-semibold">
                   <span className="border-b border-transparent group-hover:border-[#D4AF37] pb-1 transition-all">Discover Our Story</span>
@@ -107,31 +108,31 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            
+
             <div className="lg:col-span-7 relative h-[700px] w-full mt-10 lg:mt-0">
               <div className="absolute inset-0 bg-[#D4AF37]/5 translate-x-4 translate-y-4 border border-[#D4AF37]/20 z-0"></div>
-              <img 
-                src="/images/pool.jpg" 
-                alt="Luxury Lifestyle" 
+              <img
+                src="/images/exterior.jpg"
+                alt="Luxury Lifestyle"
                 className="relative z-10 w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-1000 shadow-2xl"
               />
               {/* Floating Stat Card */}
               <div className="absolute -bottom-8 -left-8 md:bottom-12 md:-left-12 bg-black/80 backdrop-blur-md border border-[#D4AF37]/30 p-8 shadow-2xl z-20 max-w-[250px] fade-in">
                 <Award className="w-8 h-8 text-[#D4AF37] mb-4" />
                 <h4 className="text-3xl font-serif text-white mb-2">100+</h4>
-                <p className="text-white/60 text-xs uppercase tracking-widest leading-relaxed">Elite Families Already Onboard</p>
+                <p className="text-white/60 text-xs uppercase tracking-widest leading-relaxed">Join the inner circle of distinguished families.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gym Highlight - Cinematic Section */}
+      {/* Amenities Highlight - Cinematic Section */}
       <section className="py-32 relative overflow-hidden flex items-center justify-center min-h-[80vh]">
         <div className="absolute inset-0">
-          <img 
-            src="/images/gym.jpg" 
-            alt="Modern Black & Gold Gym" 
+          <img
+            src="/images/amenities-bg.png"
+            alt="Luxury Club Amenities"
             className="w-full h-full object-cover scale-100 hover:scale-105 transition-transform duration-[20s]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40 backdrop-blur-[2px]"></div>
@@ -139,13 +140,13 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl">
             <div className="w-16 h-1 bg-[#D4AF37] mb-8"></div>
-            <h2 className="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight">Stronger <br/><span className="text-[#D4AF37]">Together</span></h2>
-            <p className="text-xl text-white/90 font-light mb-8 tracking-wide">Exclusive Gym Privileges for Your Entire Family</p>
+            <h2 className="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight">World-Class <br /><span className="text-[#D4AF37]">Amenities</span></h2>
+            <p className="text-xl text-white/90 font-light mb-8 tracking-wide">A Curated Experience for Your Entire Family</p>
             <p className="text-white/60 mb-12 leading-relaxed text-lg font-light border-l border-white/20 pl-6">
-              State-of-the-art equipment, personalized training, and a motivating environment designed with our signature black and gold aesthetic. Elevate your fitness journey.
+              Designed for a premium lifestyle and elevated social experience, the club offers an elite networking environment for HNI members, family-friendly access covering spouse and children, exclusive events and curated gatherings, and a refined luxury ambience — all within a limited membership that ensures true exclusivity.
             </p>
-            <Link 
-              href="/amenities" 
+            <Link
+              href="/amenities"
               className="px-10 py-4 border border-[#D4AF37] text-white hover:bg-[#D4AF37] hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-semibold inline-flex items-center gap-3 group"
             >
               Explore All Amenities
@@ -163,11 +164,10 @@ export default function Home() {
 
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-20 flex flex-col items-center">
-            <Shield className="w-12 h-12 text-[#D4AF37] mb-6 opacity-80" />
             <h4 className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold mb-4">Membership Tiers</h4>
             <h2 className="text-4xl md:text-6xl font-serif text-white">Choose Your Access</h2>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             {[
               { name: 'Blue', price: '₹74,999', period: '1 Year', features: ['Full Family Access', '20% Dining Discount', 'Standard Event Access'], color: 'border-blue-900/40 hover:border-blue-500/60', gradient: 'from-blue-900/10' },
@@ -193,8 +193,8 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/membership" 
+                <Link
+                  href="/membership"
                   className={`w-full py-4 transition-all uppercase tracking-widest text-xs font-semibold mt-auto flex justify-center items-center gap-2 group ${plan.isPopular ? 'bg-[#D4AF37] text-black hover:bg-white' : 'border border-white/20 text-white hover:border-white'}`}
                 >
                   View Details <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -206,23 +206,23 @@ export default function Home() {
           {/* Membership Benefits Highlights */}
           <div className="mt-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
             {[
-              { 
-                title: "Private Community", 
+              {
+                title: "Private Community",
                 desc: "Strictly limited to 100 elite families to ensure an uncrowded and private atmosphere.",
                 icon: <Shield className="w-6 h-6 text-[#D4AF37]" />
               },
-              { 
-                title: "Family First", 
+              {
+                title: "Family First",
                 desc: "Privileges extend to your spouse, children, and parents under a single membership.",
                 icon: <Star className="w-6 h-6 text-[#D4AF37]" />
               },
-              { 
-                title: "Bespoke Hospitality", 
+              {
+                title: "Bespoke Hospitality",
                 desc: "Experience personalized service with a dedicated concierge for every member.",
                 icon: <Shield className="w-6 h-6 text-[#D4AF37]" />
               },
-              { 
-                title: "Global Access", 
+              {
+                title: "Global Access",
                 desc: "Reciprocal privileges at over 170+ premium private clubs across the globe.",
                 icon: <Star className="w-6 h-6 text-[#D4AF37]" />
               }
@@ -241,9 +241,9 @@ export default function Home() {
 
           {/* Membership Call to Action */}
           <div className="mt-24 pt-20 border-t border-white/5 text-center">
-            <p className="text-[#D4AF37] text-xs mb-8 uppercase tracking-[0.4em] font-semibold">Join Nagpur's Most Elite Circle</p>
-            <Link 
-              href="/contact" 
+            <p className="text-[#D4AF37] text-xs mb-8 uppercase tracking-[0.4em] font-semibold">Join Nagpur&apos;s Most Elite Circle</p>
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-4 text-white hover:text-[#D4AF37] transition-all group font-serif text-3xl md:text-4xl"
             >
               Start Your Application <ArrowRight className="w-8 h-8 group-hover:translate-x-3 transition-transform" />
@@ -260,7 +260,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Life at Stellaar</h2>
           <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">A Glimpse of the Extraordinary</p>
         </div>
-        
+
         {/* Scrolling wrapper */}
         <div className="w-full overflow-hidden flex">
           <div className="animate-marquee flex gap-6 pr-6 w-max [animation-duration:40s] hover:[animation-play-state:paused]">
@@ -284,9 +284,9 @@ export default function Home() {
               '/images/exterior.jpg',
             ].map((img, i) => (
               <div key={i} className="min-w-[280px] h-[350px] md:min-w-[400px] md:h-[500px] flex-shrink-0 relative overflow-hidden group/img cursor-pointer">
-                <img 
-                  src={img} 
-                  alt={`Stellaar Life ${i}`} 
+                <img
+                  src={img}
+                  alt={`Stellaar Life ${i}`}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover/img:bg-black/10 transition-colors duration-500"></div>
@@ -294,6 +294,35 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+        {/* Location Section */}
+         <LocationSection />
+      {/* Explore Categories - Horizontal Cards */}
+      <section className="w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full min-h-[500px] md:h-[60vh]">
+          {[
+            { title: 'About Us', image: '/images/reception.jpg', link: '/about' },
+            { title: 'Amenities', image: '/images/pool.jpg', link: '/amenities' },
+            { title: 'Gallery', image: '/images/gallery-1.jpg', link: '/gallery' }
+          ].map((card, i) => (
+            <Link href={card.link} key={i} className="relative group block overflow-hidden border-r border-white/5 last:border-r-0">
+              <img
+                src={card.image}
+                alt={card.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/60 group-hover:bg-black/30 transition-colors duration-700"></div>
+
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10">
+                <h3 className="text-3xl md:text-4xl font-serif text-white tracking-wide group-hover:-translate-y-4 transition-transform duration-700">{card.title}</h3>
+
+                <div className="w-16 h-16 rounded-full border border-white/30 flex items-center justify-center text-white backdrop-blur-md hover:backdrop-blur-none bg-black/20 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-700 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 mt-6 shadow-2xl">
+                  <ArrowRight className="w-6 h-6 -rotate-45 group-hover:rotate-0 transition-transform duration-700" />
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
