@@ -434,58 +434,10 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
-
-              {/* Thin gold divider */}
-              <div className="w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-[#C9A14A]/30 to-transparent mb-12" />
-
-              {/* Stats Row */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
-                {/* Members */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full border border-[#C9A14A]/40 bg-[#C9A14A]/10 flex items-center justify-center shadow-[0_0_14px_rgba(201,161,74,0.3)]">
-                    <Users className="w-5 h-5 text-[#C9A14A]" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-2xl font-serif text-white font-bold">
-                      500+</div>
-                    <div className="text-white/45 text-[11px] uppercase tracking-widest">Happy Members</div>
-                  </div>
-                </div>
-
-                <div className="hidden sm:block w-px h-10 bg-white/10" />
-
-                {/* Rating with heart */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full border border-[#C9A14A]/40 bg-gradient-to-br from-[#C9A14A]/20 to-black/50 flex items-center justify-center shadow-[0_0_20px_rgba(201,161,74,0.4)] hover:shadow-[0_0_35px_rgba(201,161,74,0.7)] hover:scale-110 transition-all duration-300 cursor-pointer">
-                    <Heart className="w-5 h-5 fill-[#C9A14A] text-[#C9A14A] drop-shadow-[0_0_6px_rgba(201,161,74,0.9)]" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-2xl font-serif text-white font-bold">4.8/5</div>
-                    <div className="text-white/45 text-[11px] uppercase tracking-widest">Loved by Families</div>
-                  </div>
-                </div>
-
-                <div className="hidden sm:block w-px h-10 bg-white/10" />
-
-                {/* Exclusive */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full border border-[#C9A14A]/40 bg-[#C9A14A]/10 flex items-center justify-center shadow-[0_0_14px_rgba(201,161,74,0.3)]">
-                    <Shield className="w-5 h-5 text-[#C9A14A]" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-2xl font-serif text-white font-bold">Exclusive</div>
-                    <div className="text-white/45 text-[11px] uppercase tracking-widest">Premium Privileges</div>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
       </section>
-
-
-
       {/* Location Section */}
       <LocationSection />
 
@@ -563,25 +515,7 @@ export default function Home() {
               </h2>
               <p className="text-white/55 text-lg font-light mb-12">Luxury. Comfort. Community — all in one place.</p>
 
-              {/* Stats */}
-              <div className="flex items-center gap-10 mb-12">
-                <div className="flex flex-col">
-                  <span className="text-3xl font-serif text-white font-bold">500+</span>
-                  <span className="text-white/45 text-[11px] uppercase tracking-widest mt-1">Happy Members</span>
-                </div>
-                <div className="w-px h-12 bg-white/10"></div>
-                <div className="flex items-center gap-4">
-                  {/* Premium Like Icon */}
-                  <div className="w-[58px] h-[58px] rounded-full bg-gradient-to-br from-[#C9A14A]/25 to-black/70 backdrop-blur-md border border-[#C9A14A]/45 flex items-center justify-center shadow-[0_0_22px_rgba(201,161,74,0.35)] hover:shadow-[0_0_45px_rgba(201,161,74,0.65)] hover:scale-110 transition-all duration-300 cursor-pointer">
-                    <Heart className="w-6 h-6 fill-[#C9A14A] text-[#C9A14A] drop-shadow-[0_0_8px_rgba(201,161,74,0.9)]" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-2xl font-serif text-white font-bold">4.8/5</span>
-                    <span className="text-white/45 text-[11px] uppercase tracking-widest mt-1">Loved by Families</span>
-                  </div>
-                </div>
-              </div>
-
+              
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <Link
