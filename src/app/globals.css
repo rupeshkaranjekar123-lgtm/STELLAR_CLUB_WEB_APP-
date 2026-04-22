@@ -7,7 +7,9 @@
   --color-dark: #111111;
   --color-gray-dark: #222222;
   
-  --font-primary: 'Playfair Display', serif;
+  --font-primary: 'Cinzel', serif;
+  --font-accent: 'Cormorant Garamond', serif;
+  --font-serif: 'Cinzel', serif;
   --font-secondary: 'Inter', sans-serif;
 }
 
@@ -23,8 +25,15 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: var(--font-primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-accent);
+  font-style: italic;
 }
 
 .text-gold {

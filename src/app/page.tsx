@@ -29,20 +29,20 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div className="relative z-10 container mx-auto px-6 max-w-7xl flex flex-col items-center text-center">
-          
+
           {/* Brand Icon / Crown */}
           <div className="mb-8 flex flex-col items-center gap-4 fade-in">
-             <div className="flex items-center gap-4 mb-2">
-                <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#C9A14A]/50"></div>
-                <svg width="34" height="30" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-[0_0_12px_rgba(201,161,74,0.8)]">
-                  <path d="M21 2L26 14L38 8L30 22H12L4 8L16 14L21 2Z" fill="#C9A14A" stroke="#C9A14A" strokeWidth="1" />
-                  <rect x="10" y="24" width="22" height="5" rx="2" fill="#C9A14A" />
-                </svg>
-                <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#C9A14A]/50"></div>
-             </div>
-             <p className="text-[#C9A14A] tracking-[0.45em] uppercase text-[10px] sm:text-xs font-bold opacity-90">
-               Join Nagpur&apos;s Most Elite Circle
-             </p>
+            <div className="flex items-center gap-4 mb-2">
+              <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#C9A14A]/50"></div>
+              <svg width="34" height="30" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-[0_0_12px_rgba(201,161,74,0.8)]">
+                <path d="M21 2L26 14L38 8L30 22H12L4 8L16 14L21 2Z" fill="#C9A14A" stroke="#C9A14A" strokeWidth="1" />
+                <rect x="10" y="24" width="22" height="5" rx="2" fill="#C9A14A" />
+              </svg>
+              <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#C9A14A]/50"></div>
+            </div>
+            <p className="text-[#C9A14A] tracking-[0.45em] uppercase text-[10px] sm:text-xs font-bold opacity-90">
+              Join Nagpur&apos;s Most Elite Circle
+            </p>
           </div>
 
           {/* Headline */}
@@ -83,18 +83,22 @@ export default function Home() {
           <div className="mt-16 w-full max-w-5xl px-6 fade-in delay-500 flex flex-col items-center gap-10">
 
             {/* Affiliation Pill */}
-            <Link 
-              href="https://www.reformsclub.com/" 
+            <Link
+              href="https://www.reformsclub.com/"
               target="_blank"
               className="group relative flex items-center gap-6 px-10 py-4 rounded-full border border-[#C9A14A]/30 bg-black/60 backdrop-blur-md hover:border-[#C9A14A] hover:bg-black transition-all duration-700 shadow-[0_0_30px_rgba(0,0,0,0.4)] hover:shadow-[0_0_40px_rgba(201,161,74,0.2)]"
             >
               {/* Crest Logo */}
-              <div className="w-12 h-12 rounded-full border border-[#C9A14A]/40 p-1 flex items-center justify-center bg-gradient-to-br from-[#C9A14A]/20 to-transparent">
-                 <div className="w-full h-full rounded-full border border-[#C9A14A]/20 flex items-center justify-center font-serif text-[#C9A14A] text-lg font-bold">R</div>
+              <div className="w-12 h-12 rounded-full border border-[#C9A14A]/40 p-0.5 flex items-center justify-center bg-white shadow-[0_0_15px_rgba(255,255,255,0.2)] overflow-hidden">
+                <img
+                  src="/images/reforms-club-logo.png"
+                  alt="Reforms Club Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-white/50 text-[11px] uppercase tracking-[0.3em] font-medium">Affiliated with</span>
-                <span className="text-[#C9A14A] text-lg sm:text-xl font-serif tracking-wide group-hover:drop-shadow-[0_0_10px_rgba(201,161,74,0.5)] transition-all">Reform Club Amravati</span>
+                <span className="text-[#C9A14A] text-lg sm:text-xl font-serif tracking-wide group-hover:drop-shadow-[0_0_10px_rgba(201,161,74,0.5)] transition-all">Reforms Club Amravati</span>
                 <ArrowRight className="w-5 h-5 text-[#C9A14A] group-hover:translate-x-2 transition-transform duration-500" />
               </div>
             </Link>
@@ -176,6 +180,59 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Auto Scrolling Image Gallery Section */}
+      <section className="py-24 bg-[#050505] overflow-hidden">
+        <div className="text-center mb-16">
+          <Shield className="w-8 h-8 text-[#D4AF37] mx-auto mb-4 opacity-80" />
+          <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Life at Stellaar</h2>
+          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">A Glimpse of the Extraordinary</p>
+        </div>
+
+        {/* Scrolling wrapper */}
+        <div className="w-full overflow-hidden flex">
+          <div className="animate-marquee flex gap-6 pr-6 w-max [animation-duration:40s] hover:[animation-play-state:paused]">
+            {[
+              '/images/gallery-1.jpg',
+              '/images/gallery-2.jpg',
+              '/images/gallery-3.jpg',
+              '/images/gallery-4.jpg',
+              '/images/gallery-5.jpg',
+              '/images/pool.jpg',
+              '/images/dining.jpg',
+              '/images/exterior.jpg',
+              // DUPLICATE for seamless loop
+              '/images/gallery-1.jpg',
+              '/images/gallery-2.jpg',
+              '/images/gallery-3.jpg',
+              '/images/gallery-4.jpg',
+              '/images/gallery-5.jpg',
+              '/images/pool.jpg',
+              '/images/dining.jpg',
+              '/images/exterior.jpg',
+            ].map((img, i) => (
+              <Link
+                href="/gallery"
+                key={i}
+                className="min-w-[280px] h-[350px] md:min-w-[400px] md:h-[500px] flex-shrink-0 relative overflow-hidden group/img cursor-pointer block"
+              >
+                <img
+                  src={img}
+                  alt={`Stellaar Life ${i}`}
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover/img:bg-black/10 transition-colors duration-500 flex items-center justify-center">
+                  <div className="opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 flex flex-col items-center">
+                    <Camera className="w-8 h-8 text-[#D4AF37] mb-2" />
+                    <span className="text-white text-[10px] tracking-[0.3em] uppercase font-bold">View Gallery</span>
+                  </div>
+                </div>
+                <div className="absolute inset-0 border border-[#D4AF37]/0 group-hover/img:border-[#D4AF37]/30 transition-colors duration-500 m-4"></div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Amenities Highlight - Cinematic Section */}
       <section className="py-32 relative overflow-hidden flex items-center justify-center min-h-[80vh]">
         <div className="absolute inset-0">
@@ -204,7 +261,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Premium Membership Cards */}
       <section className="py-32 px-6 bg-[#050505] relative overflow-hidden">
         {/* Decorative background elements */}
@@ -430,49 +486,6 @@ export default function Home() {
 
 
 
-      {/* Auto Scrolling Image Gallery Section */}
-      <section className="py-24 bg-[#050505] overflow-hidden">
-        <div className="text-center mb-16">
-          <Shield className="w-8 h-8 text-[#D4AF37] mx-auto mb-4 opacity-80" />
-          <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Life at Stellaar</h2>
-          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">A Glimpse of the Extraordinary</p>
-        </div>
-
-        {/* Scrolling wrapper */}
-        <div className="w-full overflow-hidden flex">
-          <div className="animate-marquee flex gap-6 pr-6 w-max [animation-duration:40s] hover:[animation-play-state:paused]">
-            {[
-              '/images/gallery-1.jpg',
-              '/images/gallery-2.jpg',
-              '/images/gallery-3.jpg',
-              '/images/gallery-4.jpg',
-              '/images/gallery-5.jpg',
-              '/images/pool.jpg',
-              '/images/dining.jpg',
-              '/images/exterior.jpg',
-              // DUPLICATE for seamless loop
-              '/images/gallery-1.jpg',
-              '/images/gallery-2.jpg',
-              '/images/gallery-3.jpg',
-              '/images/gallery-4.jpg',
-              '/images/gallery-5.jpg',
-              '/images/pool.jpg',
-              '/images/dining.jpg',
-              '/images/exterior.jpg',
-            ].map((img, i) => (
-              <div key={i} className="min-w-[280px] h-[350px] md:min-w-[400px] md:h-[500px] flex-shrink-0 relative overflow-hidden group/img cursor-pointer">
-                <img
-                  src={img}
-                  alt={`Stellaar Life ${i}`}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover/img:bg-black/10 transition-colors duration-500"></div>
-                <div className="absolute inset-0 border border-[#D4AF37]/0 group-hover/img:border-[#D4AF37]/30 transition-colors duration-500 m-4"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Location Section */}
       <LocationSection />
 

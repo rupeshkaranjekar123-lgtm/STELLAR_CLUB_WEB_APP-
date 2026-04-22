@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -27,6 +28,14 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [mobileMenuOpen]);
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 max-w-7xl">
@@ -49,7 +58,7 @@ export default function Navbar() {
               <Link 
                 key={link.href} 
                 href={link.href}
-                className={`text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:text-[#C9A14A] ${pathname === link.href ? 'text-[#C9A14A] font-bold' : 'text-white/70'}`}
+                className={`text-[10px] tracking-[0.3em] uppercase transition-all duration-300 hover:text-[#C9A14A] font-primary ${pathname === link.href ? 'text-[#C9A14A] font-bold' : 'text-white/70'}`}
               >
                 {link.label}
               </Link>
@@ -67,36 +76,76 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-white"
+            className="md:hidden text-white z-[70] relative"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {mobileMenuOpen ? <X size={32} className="text-[#C9A14A]" /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg border-b border-[#D4AF37]/20 py-6 px-6 flex flex-col gap-6 fade-in">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.href} 
-              href={link.href}
-              className={`text-lg tracking-widest uppercase transition-colors ${pathname === link.href ? 'text-[#D4AF37]' : 'text-white/80'}`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Link 
-            href="/membership" 
-            className="px-6 py-3 border border-[#D4AF37] text-[#D4AF37] text-center transition-all duration-300 tracking-wider text-sm uppercase rounded-sm mt-4"
-            onClick={() => setMobileMenuOpen(false)}
+      {/* Full Screen Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 w-full h-screen bg-black z-[60] flex flex-col justify-center items-center md:hidden"
           >
-            Join Club
-          </Link>
-        </div>
-      )}
+            {/* Background Texture/Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-[#1a1a1a] pointer-events-none"></div>
+            
+            {/* Decorative Elements */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#C9A14A]/5 blur-[120px] rounded-full"></div>
+
+            <nav className="relative z-10 flex flex-col items-center gap-8 px-6">
+              {navLinks.map((link, index) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 + index * 0.05 }}
+                >
+                  <Link 
+                    href={link.href}
+                    className={`text-2xl font-primary tracking-[0.3em] uppercase transition-all duration-500 hover:text-[#C9A14A] ${pathname === link.href ? 'text-[#C9A14A] font-medium' : 'text-white/60'}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+              
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4 }}
+                className="mt-8"
+              >
+                <Link 
+                  href="/membership" 
+                  className="px-10 py-4 border border-[#C9A14A]/40 text-[#C9A14A] text-center transition-all duration-500 tracking-[0.25em] text-sm uppercase rounded-sm hover:bg-[#C9A14A] hover:text-black hover:border-[#C9A14A]"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Join the Club
+                </Link>
+              </motion.div>
+            </nav>
+
+            {/* Bottom Info */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="absolute bottom-12 left-0 w-full text-center px-6"
+            >
+              <p className="text-white/30 text-[10px] tracking-[0.5em] uppercase">The Stellaar &copy; 2026</p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
