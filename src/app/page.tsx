@@ -10,12 +10,12 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 pb-12">
+      <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 pb-32">
         {/* Cinematic background with vignette */}
         <div className="absolute inset-0 z-0">
           <img
             src="/images/amenities-bg.png"
-            alt="The Stellaar Luxury Lounge"
+            alt="The Stellar Luxury Lounge"
             className="w-full h-full object-cover opacity-60 scale-110 animate-[kenburns_30s_ease-in-out_infinite_alternate]"
           />
           {/* Overlays for depth and cinematic lighting */}
@@ -47,13 +47,13 @@ export default function Home() {
 
           {/* Headline */}
           <h1 className="relative font-serif text-white mb-8 leading-[1.1] flex flex-col items-center fade-in delay-100">
-            <span className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light tracking-tight drop-shadow-2xl">
+            <span className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-light tracking-tight drop-shadow-2xl">
               Exclusive
             </span>
-            <span className="text-[#C9A14A] text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] font-serif my-1 drop-shadow-[0_0_20px_rgba(201,161,74,0.25)]">
+            <span className="text-shimmer text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] font-serif my-1 drop-shadow-[0_0_20px_rgba(201,161,74,0.25)]">
               Premium
             </span>
-            <span className="text-3xl sm:text-5xl md:text-6xl lg:text-[5rem] font-light tracking-wider drop-shadow-2xl uppercase">
+            <span className="text-2xl sm:text-4xl md:text-5xl lg:text-[4rem] font-light tracking-wider drop-shadow-2xl uppercase">
               Family Club
             </span>
           </h1>
@@ -67,7 +67,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto px-4 fade-in delay-300">
             <Link
               href="/contact"
-              className="group relative px-12 py-4 bg-gradient-to-r from-[#C9A14A] via-[#D4B55A] to-[#A8832C] text-black transition-all duration-500 uppercase tracking-[0.2em] text-xs font-bold w-full sm:w-auto text-center rounded-sm shadow-[0_0_30px_rgba(201,161,74,0.4)] hover:shadow-[0_0_50px_rgba(201,161,74,0.6)] hover:scale-105 flex items-center justify-center gap-2"
+              className="group relative px-12 py-4 bg-gradient-to-r from-[#C9A14A] via-[#D4B55A] to-[#A8832C] text-black transition-all duration-500 uppercase tracking-[0.2em] text-xs font-bold w-full sm:w-auto text-center rounded-sm shadow-[0_0_30px_rgba(201,161,74,0.4)] hover:shadow-[0_0_50px_rgba(201,161,74,0.6)] hover:scale-105 flex items-center justify-center gap-2 pulse-glow"
             >
               Book a Visit <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -80,29 +80,51 @@ export default function Home() {
           </div>
 
           {/* Stats & Affiliation Section */}
-          <div className="mt-16 w-full max-w-5xl px-6 fade-in delay-500 flex flex-col items-center gap-10">
+          <div className="mt-16 w-full max-w-5xl px-6 fade-in delay-500 flex flex-col items-center">
 
-            {/* Affiliation Pill */}
+            {/* Affiliation Banner */}
             <Link
               href="https://www.reformsclub.com/"
               target="_blank"
-              className="group relative flex items-center gap-6 px-10 py-4 rounded-full border border-[#C9A14A]/30 bg-black/60 backdrop-blur-md hover:border-[#C9A14A] hover:bg-black transition-all duration-700 shadow-[0_0_30px_rgba(0,0,0,0.4)] hover:shadow-[0_0_40px_rgba(201,161,74,0.2)]"
+              className="group relative flex flex-col md:flex-row items-center justify-between px-6 py-4 md:px-10 md:py-6 rounded-3xl md:rounded-full border border-[#D4AF37]/30 bg-black/40 backdrop-blur-md hover:scale-[1.02] hover:border-[#D4AF37]/70 hover:shadow-[0_0_30px_rgba(212,175,55,0.25)] transition-all duration-300 w-full max-w-4xl mx-auto"
             >
-              {/* Crest Logo */}
-              <div className="w-12 h-12 rounded-full border border-[#C9A14A]/40 p-0.5 flex items-center justify-center bg-white shadow-[0_0_15px_rgba(255,255,255,0.2)] overflow-hidden">
-                <img
-                  src="/images/reforms-club-logo.png"
-                  alt="Reforms Club Logo"
-                  className="w-full h-full object-contain"
-                />
+              {/* Left/Center: Logo & Text */}
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                {/* Logo */}
+                <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-white p-1 flex items-center justify-center border border-[#D4AF37]/50 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                  <img
+                    src="/images/reforms-club-logo.png"
+                    alt="Reforms Club Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
+                {/* Divider Line (Desktop only) */}
+                <div className="hidden md:block w-px h-12 bg-gradient-to-b from-transparent via-[#D4AF37]/50 to-transparent"></div>
+
+                {/* Text */}
+                <div className="text-center md:text-left">
+                  <p className="text-gray-400 uppercase tracking-widest text-xs md:text-sm font-semibold mb-1">
+                    Affiliated With
+                  </p>
+                  <h3 className="text-white font-serif text-lg md:text-2xl tracking-wide group-hover:text-[#D4AF37] transition-colors duration-300">
+                    Reforms Club Amravati
+                  </h3>
+                </div>
               </div>
-              <div className="flex items-center gap-3">
-                <span className="text-white/50 text-[11px] uppercase tracking-[0.3em] font-medium">Affiliated with</span>
-                <span className="text-[#C9A14A] text-lg sm:text-xl font-serif tracking-wide group-hover:drop-shadow-[0_0_10px_rgba(201,161,74,0.5)] transition-all">Reforms Club Amravati</span>
-                <ArrowRight className="w-5 h-5 text-[#C9A14A] group-hover:translate-x-2 transition-transform duration-500" />
+
+              {/* Right: Arrow */}
+              <div className="hidden md:flex shrink-0 w-12 h-12 rounded-full border border-[#D4AF37]/30 items-center justify-center group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] transition-all duration-300">
+                <ArrowRight className="w-5 h-5 text-[#D4AF37] group-hover:text-black transition-colors" />
               </div>
             </Link>
+
           </div>
+        </div>
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/25 select-none">
+          <span className="text-[9px] tracking-[0.55em] uppercase">Scroll</span>
+          <div className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
         </div>
       </section>
 
@@ -124,6 +146,29 @@ export default function Home() {
         </div>
       </div>
 
+        {/* ── Club in Numbers ── */}
+        <section className="py-14 bg-[#030303] border-y border-[#D4AF37]/10 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.06)_0%,transparent_70%)] pointer-events-none" />
+          <div className="container mx-auto max-w-6xl px-6 relative z-10">
+            <div className="grid grid-cols-2 md:grid-cols-4">
+              {[
+                { value: '100', suffix: '', label: 'Elite Member Families' },
+                { value: '20', suffix: '+', label: 'Premium Amenities' },
+                { value: '170', suffix: '+', label: 'Global Club Affiliations' },
+                { value: '5', suffix: '★', label: 'Star Luxury Standard' },
+              ].map((stat, i) => (
+                <div key={i} className="group relative flex flex-col items-center text-center py-8 px-4 cursor-default">
+                  {i < 3 && <div className="hidden md:block absolute right-0 top-1/4 h-1/2 w-px bg-[#D4AF37]/15" />}
+                  <div className="text-4xl md:text-5xl font-serif font-bold text-[#D4AF37] mb-2 leading-none tracking-tight group-hover:scale-105 transition-transform duration-500">
+                    {stat.value}<span className="text-[#D4AF37]/55 text-3xl">{stat.suffix}</span>
+                  </div>
+                  <div className="text-white/35 text-[10px] uppercase tracking-[0.3em] leading-snug">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
       {/* Editorial About Preview */}
       <section className="py-32 px-6 relative bg-gradient-to-b from-black to-[#050505]">
         <div className="container mx-auto max-w-7xl">
@@ -132,11 +177,11 @@ export default function Home() {
               <h4 className="flex items-center gap-4 text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">
                 <span className="w-8 h-[1px] bg-[#D4AF37]"></span> The Vision
               </h4>
-              <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight">
-                A Legacy of <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#FFF3B0]">Luxury</span>
+              <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight">
+                A Legacy of <br /><span className="text-shimmer">Luxury</span>
               </h2>
               <p className="text-white/60 leading-relaxed font-light text-lg">
-                The Stellaar is not just a club; it is a statement. Designed for the elite few, we offer a sanctuary where families can bond, professionals can network, and individuals can rejuvenate in absolute luxury.
+                The Stellar is not just a club; it is a statement. Designed for the elite few, we offer a sanctuary where families can bond, professionals can network, and individuals can rejuvenate in absolute luxury.
               </p>
 
               <div className="pt-6 space-y-5">
@@ -169,11 +214,17 @@ export default function Home() {
                 alt="Luxury Lifestyle"
                 className="relative z-10 w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-1000 shadow-2xl"
               />
-              {/* Floating Stat Card */}
+              {/* Floating Stat Card — Bottom Left */}
               <div className="absolute -bottom-8 -left-8 md:bottom-12 md:-left-12 bg-black/80 backdrop-blur-md border border-[#D4AF37]/30 p-8 shadow-2xl z-20 max-w-[250px] fade-in">
                 <Award className="w-8 h-8 text-[#D4AF37] mb-4" />
                 <h4 className="text-3xl font-serif text-white mb-2">100+</h4>
                 <p className="text-white/60 text-xs uppercase tracking-widest leading-relaxed">Join the inner circle of distinguished families.</p>
+              </div>
+              {/* Floating Est. Card — Top Right */}
+              <div className="absolute -top-5 -right-5 md:top-8 md:-right-8 bg-black/90 backdrop-blur-md border border-[#D4AF37]/20 p-5 shadow-2xl z-20 fade-in float-slow">
+                <p className="text-[#D4AF37] text-[9px] uppercase tracking-[0.4em] mb-1">Established</p>
+                <div className="text-3xl font-serif text-white leading-none">2024</div>
+                <p className="text-white/30 text-[9px] uppercase tracking-widest mt-1">Nagpur, India</p>
               </div>
             </div>
           </div>
@@ -185,7 +236,7 @@ export default function Home() {
       <section className="py-24 bg-[#050505] overflow-hidden">
         <div className="text-center mb-16">
           <Shield className="w-8 h-8 text-[#D4AF37] mx-auto mb-4 opacity-80" />
-          <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Life at Stellaar</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-white mb-3">Life at Stellar</h2>
           <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">A Glimpse of the Extraordinary</p>
         </div>
 
@@ -218,7 +269,7 @@ export default function Home() {
               >
                 <img
                   src={img}
-                  alt={`Stellaar Life ${i}`}
+                  alt={`Stellar Life ${i}`}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover/img:bg-black/10 transition-colors duration-500 flex items-center justify-center">
@@ -233,6 +284,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Amenities Highlight - Cinematic Section */}
       <section className="py-32 relative overflow-hidden flex items-center justify-center min-h-[80vh]">
         <div className="absolute inset-0">
@@ -246,10 +298,10 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl">
             <div className="w-16 h-1 bg-[#D4AF37] mb-8"></div>
-            <h2 className="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight">World-Class <br /><span className="text-[#D4AF37]">Amenities</span></h2>
+            <h2 className="text-4xl md:text-6xl font-serif text-white mb-6 leading-tight">World Class <br /><span className="text-shimmer">Amenities</span></h2>
             <p className="text-xl text-white/90 font-light mb-8 tracking-wide">A Curated Experience for Your Entire Family</p>
             <p className="text-white/60 mb-12 leading-relaxed text-lg font-light border-l border-white/20 pl-6">
-              Designed for a premium lifestyle and elevated social experience, the club offers an elite networking environment for HNI members, family-friendly access covering spouse and children, exclusive events and curated gatherings, and a refined luxury ambience — all within a limited membership that ensures true exclusivity.
+              Designed for a premium lifestyle and elevated social experience, the club offers an elite networking environment for HNI members, family-friendly access covering spouse and children, exclusive events and curated gatherings, and a refined luxury ambience all within a limited membership that ensures true exclusivity.
             </p>
             <Link
               href="/amenities"
@@ -269,8 +321,13 @@ export default function Home() {
 
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-20 flex flex-col items-center">
-            <h4 className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold mb-4">Membership Tiers</h4>
-            <h2 className="text-4xl md:text-6xl font-serif text-white">Choose Your Access</h2>
+            <div className="flex items-center gap-4 mb-5">
+              <div className="w-10 h-px bg-[#D4AF37]/40" />
+              <h4 className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">Membership Tiers</h4>
+              <div className="w-10 h-px bg-[#D4AF37]/40" />
+            </div>
+            <h2 className="text-3xl md:text-5xl font-serif text-white">Choose Your Access</h2>
+            <p className="text-white/35 text-xs uppercase tracking-[0.3em] mt-4">Limited to 100 distinguished families</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
@@ -279,7 +336,7 @@ export default function Home() {
               { name: 'Gold', price: '₹2,24,999', period: '5 Years', features: ['Full Family Access', '30% Dining Discount', 'VIP Event Access', 'Unlimited Guest Passes', 'Valet Parking'], color: 'border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.15)] transform scale-105 z-10', gradient: 'from-[#D4AF37]/10', isPopular: true },
               { name: 'Silver', price: '₹1,74,999', period: '3 Years', features: ['Full Family Access', '25% Dining Discount', 'Priority Event Access', '3 Guest Passes/mo'], color: 'border-slate-500/40 hover:border-slate-300/60', gradient: 'from-slate-500/10' }
             ].map((plan, i) => (
-              <div key={i} className={`relative bg-gradient-to-b ${plan.gradient} to-transparent backdrop-blur-xl p-10 flex flex-col items-center text-center transition-all duration-500 border ${plan.color} ${plan.isPopular ? 'py-14 bg-black/60' : 'bg-black/40'}`}>
+              <div key={i} className={`relative bg-gradient-to-b ${plan.gradient} to-transparent backdrop-blur-xl p-10 flex flex-col items-center text-center transition-all duration-500 border hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] ${plan.color} ${plan.isPopular ? 'py-14 bg-black/60' : 'bg-black/40'}`}>
                 {plan.isPopular && (
                   <div className="absolute top-0 inset-x-0 mx-auto w-max px-4 py-1 bg-[#D4AF37] text-black text-[10px] font-bold uppercase tracking-widest rounded-b-md">
                     Most Popular
@@ -332,7 +389,7 @@ export default function Home() {
                 icon: <Star className="w-6 h-6 text-[#D4AF37]" />
               }
             ].map((benefit, i) => (
-              <div key={i} className="group">
+              <div key={i} className="group hover:-translate-y-1 transition-transform duration-500">
                 <div className="mb-6 p-3 w-max rounded-lg bg-[#D4AF37]/5 group-hover:bg-[#D4AF37]/10 transition-colors">
                   {benefit.icon}
                 </div>
@@ -398,7 +455,7 @@ export default function Home() {
               </p>
 
               {/* Headline */}
-              <h2 className="text-5xl md:text-7xl font-serif text-white leading-tight mb-4">
+              <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight mb-4">
                 Become Part of <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] via-[#F0D080] to-[#A8832C]">
                   The Stellar Circle
@@ -421,7 +478,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
                 <Link
                   href="/apply"
-                  className="group relative px-10 py-4 bg-gradient-to-r from-[#C9A14A] via-[#D4B55A] to-[#A8832C] text-black font-bold uppercase tracking-widest text-sm inline-flex items-center gap-3 rounded-lg overflow-hidden shadow-[0_0_28px_rgba(201,161,74,0.45)] hover:shadow-[0_0_50px_rgba(201,161,74,0.7)] hover:scale-[1.04] transition-all duration-400"
+                  className="group relative px-10 py-4 bg-gradient-to-r from-[#C9A14A] via-[#D4B55A] to-[#A8832C] text-black font-bold uppercase tracking-widest text-sm inline-flex items-center gap-3 rounded-lg overflow-hidden shadow-[0_0_28px_rgba(201,161,74,0.45)] hover:shadow-[0_0_50px_rgba(201,161,74,0.7)] hover:scale-[1.04] transition-all duration-400 pulse-glow"
                 >
                   <span>Apply Now</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -451,7 +508,7 @@ export default function Home() {
           {/* Header */}
           <div className="text-center mb-20">
             <p className="text-[#C9A14A] tracking-[0.35em] uppercase text-xs font-bold mb-4">Discover More</p>
-            <h2 className="text-4xl md:text-5xl font-serif text-white">Explore Our World</h2>
+            <h2 className="text-3xl md:text-4xl font-serif text-white">Explore Our World</h2>
           </div>
 
           {/* Cards Grid */}
@@ -459,11 +516,11 @@ export default function Home() {
             {[
               { title: 'About Us', desc: 'A club. A community. A lifestyle built for the distinguished few.', image: '/images/reception.jpg', link: '/about', Icon: Users, btn: 'Discover More' },
               { title: 'Amenities', desc: 'World-class amenities designed for you and your family.', image: '/images/pool.jpg', link: '/amenities', Icon: Dumbbell, btn: 'Explore More' },
-              { title: 'Gallery', desc: 'A glimpse into the extraordinary Stellaar experience.', image: '/images/gallery-1.jpg', link: '/gallery', Icon: Camera, btn: 'View Gallery' },
+              { title: 'Gallery', desc: 'A glimpse into the extraordinary Stellar experience.', image: '/images/gallery-1.jpg', link: '/gallery', Icon: Camera, btn: 'View Gallery' },
             ].map(({ title, desc, image, link, Icon, btn }, i) => (
               <Link
                 href={link} key={i}
-                className="group relative block rounded-[20px] overflow-hidden border border-white/10 hover:border-[#C9A14A]/50 transition-all duration-700 shadow-[0_8px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_8px_60px_rgba(201,161,74,0.18)]"
+                className="group relative block rounded-[20px] overflow-hidden border border-white/10 hover:border-[#C9A14A]/50 transition-all duration-700 hover:-translate-y-2 shadow-[0_8px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_8px_60px_rgba(201,161,74,0.18)]"
               >
                 {/* Background */}
                 <div className="absolute inset-0">
@@ -497,7 +554,7 @@ export default function Home() {
       <section className="relative py-28 bg-[#060606] overflow-hidden">
         {/* Ambient background */}
         <div className="absolute inset-0">
-          <img src="/images/dining.png" alt="Stellaar Lifestyle" className="w-full h-full object-cover opacity-15" />
+          <img src="/images/dining.png" alt="Stellar Lifestyle" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-black/80"></div>
         </div>
         <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-[#C9A14A]/7 rounded-full blur-[110px] pointer-events-none"></div>
@@ -508,19 +565,19 @@ export default function Home() {
 
             {/* Left: Text */}
             <div>
-              <p className="text-[#C9A14A] tracking-[0.35em] uppercase text-xs font-bold mb-6">The Stellaar Experience</p>
-              <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight mb-6">
+              <p className="text-[#C9A14A] tracking-[0.35em] uppercase text-xs font-bold mb-6">The Stellar Experience</p>
+              <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight mb-6">
                 Experience The <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] to-[#F0D080]">Stellar Lifestyle</span>
+                <span className="text-shimmer">Stellar Lifestyle</span>
               </h2>
-              <p className="text-white/55 text-lg font-light mb-12">Luxury. Comfort. Community — all in one place.</p>
+              <p className="text-white/55 text-lg font-light mb-12">Luxury. Comfort. Community all in one place.</p>
 
-              
+
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <Link
                   href="/contact"
-                  className="group px-9 py-4 bg-gradient-to-r from-[#C9A14A] to-[#A8832C] text-black font-semibold uppercase tracking-widest text-xs inline-flex items-center gap-3 rounded-sm shadow-[0_0_22px_rgba(201,161,74,0.35)] hover:shadow-[0_0_40px_rgba(201,161,74,0.55)] hover:from-[#D4B55A] hover:to-[#C9A14A] transition-all duration-500"
+                  className="group px-9 py-4 bg-gradient-to-r from-[#C9A14A] to-[#A8832C] text-black font-semibold uppercase tracking-widest text-xs inline-flex items-center gap-3 rounded-sm shadow-[0_0_22px_rgba(201,161,74,0.35)] hover:shadow-[0_0_40px_rgba(201,161,74,0.55)] hover:from-[#D4B55A] hover:to-[#C9A14A] transition-all duration-500 pulse-glow"
                 >
                   Book a Visit
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -10,16 +10,16 @@ export default function Contact() {
       <section className="pt-40 pb-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">Contact Us</h1>
-            <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-sm">We are at your service</p>
+            <h1 className="text-4xl md:text-5xl font-serif text-white mb-6">Contact Us</h1>
+            <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs">We are at your service</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Info */}
             <div className="space-y-12">
               <div className="space-y-6">
-                <h3 className="text-3xl font-serif text-white">Get In Touch</h3>
-                <p className="text-white/60 leading-relaxed">
+                <h3 className="text-2xl font-serif text-white">Get In Touch</h3>
+                <p className="text-white/60 leading-relaxed text-sm">
                   For membership inquiries, event bookings, or general questions, please reach out to our dedicated concierge team.
                 </p>
               </div>
@@ -31,7 +31,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-white text-lg font-serif mb-1">Our Location</h4>
-                    <p className="text-white/60 text-sm leading-relaxed">Backside of Haldirams, Prashant Nagar,<br/>In front of FCI Godown, Ajni,<br/>Nagpur, Maharashtra 440015.</p>
+                    <p className="text-white/60 text-sm leading-relaxed">The Stellaar - Premium Family Club,<br/>439G+439, Prashant Nagar,<br/>Samarth Nagar East, Nagpur, Maharashtra 440015</p>
                   </div>
                 </div>
 
@@ -72,7 +72,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="glass-card p-10">
-              <h3 className="text-2xl font-serif text-white mb-8">Send an Inquiry</h3>
+              <h3 className="text-xl font-serif text-white mb-8">Send an Inquiry</h3>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">

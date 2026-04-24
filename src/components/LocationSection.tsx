@@ -20,8 +20,8 @@ export default function LocationSection() {
           <div className="w-16 h-16 rounded-full bg-[#D4AF37]/10 flex items-center justify-center mx-auto mb-6 border border-[#D4AF37]/20 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
             <MapPin className="w-8 h-8 text-[#D4AF37]" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Find Us Easily</h2>
-          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-sm font-bold">Visit our premium location in Nagpur</p>
+          <h2 className="text-3xl md:text-4xl font-serif text-white mb-4">Find Us Easily</h2>
+          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">Visit our premium location in Nagpur</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
@@ -37,9 +37,9 @@ export default function LocationSection() {
                 <div>
                   <h3 className="text-white font-serif text-xl mb-2">Location</h3>
                   <p className="text-white/60 text-sm leading-relaxed">
-                    Backside of Haldirams, Prashant Nagar,<br/>
-                    In front of FCI Godown, Ajni,<br/>
-                    Nagpur, Maharashtra 440015
+                    The Stellar Premium Family Club,<br/>
+                    439G+439, Prashant Nagar,<br/>
+                    Samarth Nagar East, Nagpur, Maharashtra 440015
                   </p>
                 </div>
               </div>
@@ -74,7 +74,7 @@ export default function LocationSection() {
 
             <div className="pt-8 mt-8 border-t border-white/10">
               <a 
-                href="https://maps.google.com/?q=Backside+of+Haldirams,+Prashant+Nagar,+Ajni,+Nagpur" 
+                href="https://maps.google.com/?q=The+Stellaar+-+Premium+Family+Club,+439G%2B439,+Prashant+Nagar,+Samarth+Nagar+East,+Nagpur,+Maharashtra+440015" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#D4AF37] text-black font-semibold rounded-lg hover:bg-white hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(212,175,55,0.4)]"
@@ -86,13 +86,19 @@ export default function LocationSection() {
           </div>
 
           {/* Map Container */}
-          <div className="lg:col-span-2 h-[400px] lg:h-auto min-h-[400px] rounded-2xl overflow-hidden border border-white/10 relative group">
+          <a 
+            href="https://maps.google.com/?q=The+Stellaar+-+Premium+Family+Club,+439G%2B439,+Prashant+Nagar,+Samarth+Nagar+East,+Nagpur,+Maharashtra+440015"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lg:col-span-2 h-[400px] lg:h-auto min-h-[400px] rounded-2xl overflow-hidden border border-white/10 relative group block cursor-pointer"
+          >
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
             <img 
               src="/images/static-map.png" 
               alt="Stellaar Location Static Map" 
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
-          </div>
+          </a>
           
         </div>
       </div>

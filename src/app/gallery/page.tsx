@@ -39,16 +39,16 @@ export default function Gallery() {
       <Navbar />
 
       <section className="pt-40 pb-10 px-6 text-center">
-        <h1 className="text-5xl md:text-7xl font-serif text-white mb-6">Gallery</h1>
-        <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-sm mb-12">A Glimpse of The Extraordinary</p>
+        <h1 className="text-4xl md:text-5xl font-serif text-white mb-6">Gallery</h1>
+        <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs mb-12">A Glimpse of The Extraordinary</p>
 
         {/* Informative Intro Section */}
         <div className="container mx-auto max-w-4xl text-center mb-16">
           <div className="w-16 h-[1px] bg-[#D4AF37] mx-auto mb-8"></div>
-          <h2 className="text-2xl md:text-3xl font-serif text-white mb-6 leading-relaxed">
+          <h2 className="text-xl md:text-2xl font-serif text-white mb-6 leading-relaxed">
             &quot;Step into a world where every detail is curated for perfection.&quot;
           </h2>
-          <p className="text-white/60 font-light text-lg leading-relaxed mb-6">
+          <p className="text-white/60 font-light text-sm leading-relaxed mb-6">
             Welcome to the visual tour of The Stellaar. As Nagpur&apos;s first premium vertical family club, our 
             facilities span across multiple floors of uncompromised luxury. From our state-of-the-art wellness 
             centers and temperature-controlled swimming pools to our exclusive fine-dining restaurants and 
@@ -138,7 +138,7 @@ export default function Gallery() {
                 <span className="inline-block border border-[#D4AF37] text-[#D4AF37] px-4 py-1 uppercase tracking-widest text-[10px] font-bold mb-6">
                   {selectedMedia.category}
                 </span>
-                <h2 className="text-3xl md:text-4xl font-serif text-white mb-6 leading-tight">
+                <h2 className="text-2xl md:text-3xl font-serif text-white mb-6 leading-tight">
                   {selectedMedia.title}
                 </h2>
                 <div className="w-12 h-[1px] bg-white/20 mb-6"></div>

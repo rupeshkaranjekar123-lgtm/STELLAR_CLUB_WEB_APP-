@@ -44,8 +44,8 @@ export default function Amenities() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black"></div>
         </div>
         <div className="relative z-10 text-center px-4 fade-in mt-16">
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-4">World-Class Amenities</h1>
-          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-sm">Experience The Extraordinary</p>
+          <h1 className="text-4xl md:text-5xl font-serif text-white mb-4">World-Class Amenities</h1>
+          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs">Experience The Extraordinary</p>
         </div>
       </section>
 
@@ -62,9 +62,9 @@ export default function Amenities() {
                 <div className="absolute inset-0 border border-[#D4AF37]/30 scale-95 transition-all duration-500 group-hover:scale-100 opacity-0 group-hover:opacity-100"></div>
               </div>
               <div className="w-full md:w-1/2 space-y-6">
-                <h2 className="text-3xl md:text-4xl font-serif text-white">{amenity.title}</h2>
+                <h2 className="text-2xl md:text-3xl font-serif text-white">{amenity.title}</h2>
                 <div className="w-12 h-1 bg-[#D4AF37]"></div>
-                <p className="text-white/70 leading-relaxed text-lg">
+                <p className="text-white/70 leading-relaxed text-base">
                   {amenity.description}
                 </p>
               </div>

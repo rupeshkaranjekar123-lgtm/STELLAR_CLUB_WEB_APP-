@@ -49,8 +49,8 @@ export default function Membership() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black"></div>
         </div>
         <div className="relative z-10 text-center px-4 fade-in mt-16">
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-4">Membership</h1>
-          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-sm">Not Just a Club — A Lifestyle</p>
+          <h1 className="text-4xl md:text-5xl font-serif text-white mb-4">Membership</h1>
+          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs">Not Just a Club — A Lifestyle</p>
         </div>
       </section>
 
@@ -59,8 +59,8 @@ export default function Membership() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <Shield className="w-10 h-10 text-[#D4AF37] mx-auto mb-6" />
-            <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Choose Your Access</h2>
-            <p className="text-white/60 max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">Choose Your Access</h2>
+            <p className="text-white/60 max-w-2xl mx-auto leading-relaxed text-sm">
               Membership at The Stellaar is strictly limited to 100 families, ensuring an uncrowded, private, and highly personalized experience.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function Membership() {
                 <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity`}></div>
                 <h3 className="text-2xl font-serif text-white mb-2">{plan.name}</h3>
                 <div className="text-xs text-white/40 uppercase tracking-widest mb-6">{plan.period}</div>
-                <div className={`text-3xl lg:text-4xl font-bold mb-8 ${plan.text}`}>{plan.price}</div>
+                <div className={`text-2xl lg:text-3xl font-bold mb-8 ${plan.text}`}>{plan.price}</div>
                 
                 <ul className="space-y-4 mb-10 w-full text-left text-white/70 text-sm flex-grow">
                   {plan.features.map((feature, idx) => (
@@ -97,8 +97,8 @@ export default function Membership() {
       <section className="py-24 px-6 bg-black border-t border-white/5">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">The Stellaar Privileges</h2>
-            <p className="text-white/60 max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">The Stellaar Privileges</h2>
+            <p className="text-white/60 max-w-2xl mx-auto leading-relaxed text-sm">
               Beyond world-class amenities, a Stellaar membership unlocks a lifestyle of unmatched prestige and convenience.
             </p>
           </div>
@@ -134,7 +134,7 @@ export default function Membership() {
         <div className="container mx-auto max-w-5xl">
           <div className="glass-card p-12 text-center border border-[#D4AF37]/20 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-[80px]"></div>
-            <h2 className="text-3xl md:text-4xl font-serif text-white mb-12 relative z-10">The Application Process</h2>
+            <h2 className="text-2xl md:text-3xl font-serif text-white mb-12 relative z-10">The Application Process</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
               <div className="space-y-4">
