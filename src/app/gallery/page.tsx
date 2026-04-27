@@ -13,26 +13,29 @@ type MediaItem = {
 };
 
 const mediaItems: MediaItem[] = [
-  { type: 'image', src: '/images/dining.jpg', title: 'Fine Dining Experience', category: 'Culinary', description: 'Experience world-class gastronomy with up to 30% off on premium dining.' },
-  { type: 'image', src: '/images/gym.jpg', title: 'Luxury Fitness Center', category: 'Wellness', description: 'Train in style with our state-of-the-art equipment and personal training.' },
-  { type: 'image', src: '/images/pool.jpg', title: 'Temperature Controlled Pool', category: 'Wellness', description: 'Dive into elegance with our pristine indoor swimming facilities.' },
-  { type: 'video', src: '/videos/video-1.mp4', title: 'The Stellaar Experience', category: 'Lifestyle', description: 'A cinematic look into the lifestyle of our elite members.' },
-  { type: 'image', src: '/images/exterior.jpg', title: 'The Stellaar Facade', category: 'Architecture', description: 'Nagpur\'s first premium vertical family club, shining in the night sky.' },
-  { type: 'image', src: '/images/membership.jpg', title: 'Exclusive Community', category: 'Lifestyle', description: 'Connect with a curated community of 100 high-net-worth families.' },
-  { type: 'image', src: '/images/family.jpg', title: 'Family Bonding', category: 'Community', description: 'Safe, luxurious spaces designed for families to connect and celebrate.' },
-  { type: 'image', src: '/images/sports.jpg', title: 'Sports & Recreation', category: 'Facilities', description: 'Premium billiards, tennis, and recreational lounges for our patrons.' },
-  { type: 'video', src: '/videos/video-6.mp4', title: 'Evening Ambiance', category: 'Entertainment', description: 'Enjoy exclusive events and VIP nightlife right within the club.' },
-  { type: 'image', src: '/images/fitness-steam.jpg', title: 'Fitness & Steam', category: 'Wellness', description: 'Rejuvenate your senses in our world-class steam and sauna rooms.' },
-  { type: 'image', src: '/images/reception.jpg', title: '5-Star Concierge', category: 'Hospitality', description: 'Our dedicated staff ensures every visit is absolutely flawless.' },
-  { type: 'image', src: '/images/gallery-1.jpg', title: 'The Grand Lounge', category: 'Spaces', description: 'Perfect for casual meetings or relaxing with a curated cocktail.' },
-  { type: 'image', src: '/images/gallery-2.jpg', title: 'Gourmet Selection', category: 'Culinary', description: 'Dishes crafted by internationally renowned executive chefs.' },
-  { type: 'image', src: '/images/gallery-3.jpg', title: 'Private Boardroom', category: 'Business', description: 'High-end networking and private business meeting facilities.' },
-  { type: 'image', src: '/images/gallery-4.jpg', title: 'Architectural Details', category: 'Architecture', description: 'Every corner of The Stellaar is meticulously designed for luxury.' },
-  { type: 'image', src: '/images/gallery-5.jpg', title: 'Rooftop Vibes', category: 'Lifestyle', description: 'Unwind under the stars at our exclusive rooftop venues.' },
+  { type: 'image', src: '/images/dining.jpg', title: 'Fine Dining Experience', category: 'Restaurant', description: 'Experience world-class gastronomy with up to 30% off on premium dining.' },
+  { type: 'image', src: '/images/gym.jpg', title: 'Luxury Fitness Center', category: 'Gym', description: 'Train in style with our state-of-the-art equipment and personal training.' },
+  { type: 'image', src: '/images/pool.jpg', title: 'Temperature Controlled Pool', category: 'Pool', description: 'Dive into elegance with our pristine indoor swimming facilities.' },
+  { type: 'video', src: '/videos/video-1.mp4', title: 'The Stellaar Experience', category: 'Events', description: 'A cinematic look into the lifestyle of our elite members.' },
+  { type: 'image', src: '/images/exterior.jpg', title: 'The Stellaar Facade', category: 'Exterior', description: 'Nagpur\'s first premium vertical family club, shining in the night sky.' },
+  { type: 'image', src: '/images/membership.jpg', title: 'Exclusive Community', category: 'Families enjoying', description: 'Connect with a curated community of 100 high-net-worth families.' },
+  { type: 'image', src: '/images/family.jpg', title: 'Family Bonding', category: 'Families enjoying', description: 'Safe, luxurious spaces designed for families to connect and celebrate.' },
+  { type: 'image', src: '/images/sports.jpg', title: 'Sports & Recreation', category: 'Gym', description: 'Premium billiards, tennis, and recreational lounges for our patrons.' },
+  { type: 'video', src: '/videos/video-6.mp4', title: 'Evening Ambiance', category: 'Events', description: 'Enjoy exclusive events and VIP nightlife right within the club.' },
+  { type: 'image', src: '/images/fitness-steam.jpg', title: 'Fitness & Steam', category: 'Gym', description: 'Rejuvenate your senses in our world-class steam and sauna rooms.' },
+  { type: 'image', src: '/images/reception.jpg', title: '5-Star Concierge', category: 'Exterior', description: 'Our dedicated staff ensures every visit is absolutely flawless.' },
+  { type: 'image', src: '/images/gallery-1.jpg', title: 'The Grand Lounge', category: 'Restaurant', description: 'Perfect for casual meetings or relaxing with a curated cocktail.' },
+  { type: 'image', src: '/images/gallery-2.jpg', title: 'Gourmet Selection', category: 'Restaurant', description: 'Dishes crafted by internationally renowned executive chefs.' },
+  { type: 'image', src: '/images/gallery-3.jpg', title: 'Private Boardroom', category: 'Banquet', description: 'High-end networking and private business meeting facilities.' },
+  { type: 'image', src: '/images/gallery-4.jpg', title: 'Architectural Details', category: 'Exterior', description: 'Every corner of The Stellaar is meticulously designed for luxury.' },
+  { type: 'image', src: '/images/gallery-5.jpg', title: 'Rooftop Vibes', category: 'Banquet', description: 'Unwind under the stars at our exclusive rooftop venues.' },
 ];
 
 export default function Gallery() {
   const [selectedMedia, setSelectedMedia] = useState<MediaItem | null>(null);
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const filteredItems = activeCategory === 'All' ? mediaItems : mediaItems.filter(item => item.category === activeCategory);
 
   return (
     <main className="min-h-screen bg-black">
@@ -60,9 +63,22 @@ export default function Gallery() {
           </p>
         </div>
 
+        {/* Category Filters */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {['All', 'Pool', 'Gym', 'Restaurant', 'Banquet', 'Events', 'Exterior', 'Families enjoying'].map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-6 py-2 rounded-full border border-[#D4AF37]/50 text-xs uppercase tracking-widest transition-all duration-300 ${activeCategory === cat ? 'bg-[#D4AF37] text-black font-bold' : 'text-white hover:bg-[#D4AF37]/20'}`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
         {/* Gallery Grid */}
         <div className="container mx-auto max-w-7xl columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-          {mediaItems.map((item, i) => (
+          {filteredItems.map((item, i) => (
             <div 
               key={i} 
               className="relative break-inside-avoid overflow-hidden rounded-sm group cursor-pointer border border-white/5 bg-gray-900"

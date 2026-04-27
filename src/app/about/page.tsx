@@ -156,17 +156,41 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Intention */}
-      <section className="py-24 px-6 bg-black">
-        <div className="container mx-auto max-w-4xl text-center">
-          <p className="text-[#D4AF37] tracking-[0.1em] uppercase text-xs font-semibold mb-6">Our Intention</p>
-          <h2 className="text-3xl md:text-5xl font-serif text-white mb-10 leading-tight">
-            We create exclusive settings where families can build lasting memories in unparalleled luxury.
-          </h2>
-          <p className="text-white/60 leading-relaxed text-lg mb-8 font-light">
-            Everything we do is driven by our desire to create one of a kind spaces where families can truly be together. We are a curated community of visionaries, leaders, and families who appreciate the finer things in life.
-          </p>
-          <div className="w-16 h-[1px] bg-[#D4AF37] mx-auto mt-12"></div>
+      {/* Founder's Message */}
+      <section className="py-24 px-6 bg-black relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div className="lg:col-span-5 relative">
+              <div className="relative h-[600px] w-full border border-[#D4AF37]/20 p-4">
+                <img src="/images/gallery-2.jpg" alt="Founder" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-[#050505] border border-[#D4AF37]/30 p-6 shadow-2xl">
+                <p className="text-[#D4AF37] font-serif text-2xl">Arun Deshmukh</p>
+                <p className="text-white/50 text-xs uppercase tracking-widest mt-1">Founder & Visionary</p>
+              </div>
+            </div>
+            <div className="lg:col-span-7 space-y-8 relative z-10">
+              <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">A Message From The Founder</p>
+              <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight">
+                "We wanted to build a sanctuary where success meets family."
+              </h2>
+              <div className="space-y-5 text-white/60 font-light text-lg leading-relaxed">
+                <p>
+                  For years, Nagpur lacked a true world-class destination where distinguished families could gather, celebrate, and unwind without compromising on luxury or privacy. The Stellaar was born out of this necessity.
+                </p>
+                <p>
+                  It's not just a club; it's a legacy project. We designed every square foot to foster community, ensure safety for our children, and provide an environment where lifelong memories are created.
+                </p>
+                <p>
+                  My family and I welcome you to experience a new standard of living. This is your home away from home.
+                </p>
+              </div>
+              <div className="pt-4">
+                <img src="/images/reforms-club-logo.png" alt="Signature" className="h-12 opacity-50 grayscale contrast-200" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

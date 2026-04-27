@@ -60,6 +60,9 @@ export default function Contact() {
                       Samarth Nagar East, Nagpur,<br />
                       Maharashtra 440015
                     </p>
+                    <p className="text-[#C9A14A]/80 text-sm mt-3 font-light">
+                      * Complimentary Valet Parking Available
+                    </p>
                   </div>
                 </div>
 
@@ -97,7 +100,7 @@ export default function Contact() {
               </div>
 
               {/* WhatsApp Button */}
-              <div className="pt-6">
+              <div className="pt-6 pb-6">
                 <a
                   href="https://wa.me/917888005995"
                   target="_blank"
@@ -107,6 +110,19 @@ export default function Contact() {
                   <MessageCircle className="w-6 h-6 fill-transparent" />
                   Chat on WhatsApp
                 </a>
+              </div>
+
+              {/* Google Maps Embed */}
+              <div className="w-full h-64 rounded-xl overflow-hidden border border-[#C9A14A]/20">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.7348981657317!2d79.0558485750343!3d21.1231362805494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c063cf26e7a7%3A0xcdaef6a7f342c38!2sThe%20Stellaar%20%E2%80%93%20Premium%20Family%20Club!5e0!3m2!1sen!2sin!4v1714041234567!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={false} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
 

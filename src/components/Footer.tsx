@@ -48,6 +48,8 @@ export default function Footer() {
               <li><Link href="/" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Home</Link></li>
               <li><Link href="/about" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">About Us</Link></li>
               <li><Link href="/amenities" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Amenities</Link></li>
+              <li><Link href="/restaurant" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Restaurant</Link></li>
+              <li><Link href="/banquet" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Banquet</Link></li>
               <li><Link href="/gallery" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Gallery</Link></li>
               <li><Link href="/membership" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Membership</Link></li>
               <li><Link href="/contact" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Contact</Link></li>

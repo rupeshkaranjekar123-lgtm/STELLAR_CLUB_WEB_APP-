@@ -339,11 +339,12 @@ export default function Home() {
             <p className="text-white/35 text-xs uppercase tracking-[0.3em] mt-4">Limited to 100 distinguished families</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
             {[
-              { name: 'Blue', price: '₹74,999', period: '1 Year', features: ['Full Family Access', '20% Dining Discount', 'Standard Event Access'], color: 'border-blue-900/40 hover:border-blue-500/60', gradient: 'from-blue-900/10' },
-              { name: 'Gold', price: '₹2,24,999', period: '5 Years', features: ['Full Family Access', '30% Dining Discount', 'VIP Event Access', 'Unlimited Guest Passes', 'Valet Parking'], color: 'border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.15)] transform scale-105 z-10', gradient: 'from-[#D4AF37]/10', isPopular: true },
-              { name: 'Silver', price: '₹1,74,999', period: '3 Years', features: ['Full Family Access', '25% Dining Discount', 'Priority Event Access', '3 Guest Passes/mo'], color: 'border-slate-500/40 hover:border-slate-300/60', gradient: 'from-slate-500/10' }
+              { name: 'Individual', features: ['Solo Access', '15% Dining Discount', 'Standard Event Access'], color: 'border-white/10 hover:border-white/30', gradient: 'from-white/5' },
+              { name: 'Couple', features: ['Spouse Access', '20% Dining Discount', 'Standard Event Access'], color: 'border-white/10 hover:border-white/30', gradient: 'from-white/5' },
+              { name: 'Family', features: ['Full Family Access', '30% Dining Discount', 'VIP Event Access', 'Valet Parking'], color: 'border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.15)] transform scale-105 z-10', gradient: 'from-[#D4AF37]/10', isPopular: true },
+              { name: 'Corporate', features: ['Executive Access', 'Premium Dining Discount', 'Priority Event Access', 'Corporate Passes'], color: 'border-white/10 hover:border-white/30', gradient: 'from-white/5' }
             ].map((plan, i) => (
               <div key={i} className={`relative bg-gradient-to-b ${plan.gradient} to-transparent backdrop-blur-xl p-10 flex flex-col items-center text-center transition-all duration-500 border hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] ${plan.color} ${plan.isPopular ? 'py-14 bg-black/60' : 'bg-black/40'}`}>
                 {plan.isPopular && (
@@ -351,10 +352,9 @@ export default function Home() {
                     Most Popular
                   </div>
                 )}
-                <h3 className={`text-3xl font-serif text-white mb-2 ${plan.isPopular ? 'text-[#D4AF37]' : ''}`}>{plan.name} Plan</h3>
-                <div className="text-xs text-white/50 uppercase tracking-[0.2em] mb-8">{plan.period}</div>
-                <div className="text-4xl md:text-5xl font-bold text-white mb-10 tracking-tight">{plan.price}</div>
-                <ul className="space-y-4 mb-12 w-full text-left text-white/70 text-sm">
+                <h3 className={`text-3xl font-serif text-white mt-4 mb-2 ${plan.isPopular ? 'text-[#D4AF37]' : ''}`}>{plan.name}</h3>
+
+                <ul className="space-y-4 mt-6 mb-12 w-full text-left text-white/70 text-sm">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-4 border-b border-white/5 pb-4">
                       <div className={`p-1 rounded-full ${plan.isPopular ? 'bg-[#D4AF37]/20 text-[#D4AF37]' : 'bg-white/5 text-white/50'}`}>
@@ -368,7 +368,7 @@ export default function Home() {
                   href="/membership"
                   className={`w-full py-4 transition-all uppercase tracking-widest text-xs font-semibold mt-auto flex justify-center items-center gap-2 group ${plan.isPopular ? 'bg-[#D4AF37] text-black hover:bg-white' : 'border border-white/20 text-white hover:border-white'}`}
                 >
-                  View Details <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Request Consultation <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             ))}

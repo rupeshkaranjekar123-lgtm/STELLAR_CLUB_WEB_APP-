@@ -3,29 +3,39 @@ import Footer from '@/components/Footer';
 
 const amenities = [
   {
-    title: "Luxury Gym",
-    description: "State-of-the-art fitness center featuring premium equipment, personal training, and a specialized black and gold aesthetic designed to inspire your best performance.",
-    image: "/images/gym.jpg"
-  },
-  {
-    title: "Fine Dining",
-    description: "A culinary journey curated by master chefs. Enjoy exclusive discounts and priority reservations at our premium restaurant featuring global cuisine.",
-    image: "/images/dining.jpg"
-  },
-  {
-    title: "Swimming Pool & Lounge",
+    title: "Swimming Pool",
     description: "Temperature-controlled swimming pool with private cabanas and poolside service for ultimate relaxation.",
-    image: "/images/family.jpg"
+    image: "/images/pool.jpg",
+    link: "/gallery",
+    cta: "View Pool Gallery"
   },
   {
-    title: "Steam & Sauna",
-    description: "Rejuvenate your body and mind in our dedicated wellness area, featuring luxurious steam baths and dry saunas.",
-    image: "/images/fitness-steam.jpg"
+    title: "Luxury Gym",
+    description: "State-of-the-art fitness center featuring premium equipment, personal training, and modern aesthetics designed to inspire your best performance.",
+    image: "/images/gym.jpg",
+    link: "/contact",
+    cta: "Book a Session"
   },
   {
-    title: "Banquet Hall",
-    description: "Host your exclusive events, corporate meetings, and family celebrations in our magnificent banquet space.",
-    image: "/images/reception.jpg"
+    title: "Fine Dining Restaurant",
+    description: "A culinary journey curated by master chefs. Enjoy exclusive discounts and priority reservations at our premium restaurant featuring global cuisine.",
+    image: "/images/dining.jpg",
+    link: "/restaurant",
+    cta: "Reserve a Table"
+  },
+  {
+    title: "Grand Banquet Hall",
+    description: "Host your exclusive events, corporate meetings, and family celebrations in our magnificent and fully decorated banquet space.",
+    image: "/images/gallery-5.jpg",
+    link: "/banquet",
+    cta: "Get Event Quote"
+  },
+  {
+    title: "Kids & Family Recreation",
+    description: "Dedicated safe spaces and engaging activities ensuring your children and family have the best times building lasting memories.",
+    image: "/images/family.jpg",
+    link: "/contact",
+    cta: "Inquire Now"
   }
 ];
 
@@ -64,9 +74,16 @@ export default function Amenities() {
               <div className="w-full md:w-1/2 space-y-6">
                 <h2 className="text-2xl md:text-3xl font-serif text-white">{amenity.title}</h2>
                 <div className="w-12 h-1 bg-[#D4AF37]"></div>
-                <p className="text-white/70 leading-relaxed text-base">
+                <p className="text-white/70 leading-relaxed text-base mb-8">
                   {amenity.description}
                 </p>
+                <a 
+                  href={amenity.link}
+                  className="inline-flex items-center gap-3 px-8 py-3 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-colors uppercase tracking-widest text-xs font-semibold"
+                >
+                  {amenity.cta}
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
               </div>
             </div>
           ))}

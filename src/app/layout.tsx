@@ -4,7 +4,8 @@ import StickyButtons from "@/components/StickyButtons";
 
 export const metadata: Metadata = {
   title: "The Stellaar – Premium Family Club | Nagpur",
-  description: "The Stellaar is Nagpur's most exclusive premium family club. Limited to only 100 members.",
+  description: "Experience the best club in Nagpur. The Stellaar is Nagpur's most exclusive premium family club offering luxury fitness, fine dining, and event banquets. Limited memberships available.",
+  keywords: "Best club in Nagpur, Premium family club Nagpur, Swimming pool membership Nagpur, Banquet hall Ajni Nagpur, Premium gym Nagpur, luxury club",
 };
 
 export default function RootLayout({

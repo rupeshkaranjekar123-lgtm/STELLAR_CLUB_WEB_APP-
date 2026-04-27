@@ -6,29 +6,30 @@ import Link from 'next/link';
 export default function Membership() {
   const plans = [
     {
-      name: 'Blue',
-      price: '₹74,999',
-      period: '1 Year',
-      features: ['Full Family Access', '20% Dining Discount', 'Standard Event Access', 'Gym & Pool Privileges'],
-      color: 'border-blue-900/50 hover:border-blue-500/50',
-      text: 'text-blue-400'
-    },
-    {
-      name: 'Silver',
-      price: '₹1,74,999',
-      period: '3 Years',
-      features: ['Full Family Access', '25% Dining Discount', 'Priority Event Access', 'Salon 20% Discount'],
+      name: 'Individual',
+      features: ['Solo Access', '15% Dining Discount', 'Standard Event Access', 'Gym & Pool Privileges'],
       color: 'border-slate-500/50 hover:border-slate-300/50',
       text: 'text-slate-300'
     },
     {
-      name: 'Gold',
-      price: '₹2,24,999',
-      period: '5 Years',
+      name: 'Couple',
+      features: ['Spouse Access', '20% Dining Discount', 'Standard Event Access', 'Salon 15% Discount'],
+      color: 'border-blue-900/50 hover:border-blue-500/50',
+      text: 'text-blue-400'
+    },
+    {
+      name: 'Family',
       features: ['Full Family Access', '30% Dining Discount', 'VIP Event Access', 'Stellaar Select Program'],
       color: 'border-[#D4AF37]/50 hover:border-[#D4AF37]',
-      text: 'text-[#D4AF37]'
+      text: 'text-[#D4AF37]',
+      isPopular: true
     },
+    {
+      name: 'Corporate',
+      features: ['Executive Access', 'Premium Dining Discount', 'Priority Event Access', 'Corporate Passes'],
+      color: 'border-white/10 hover:border-white/30',
+      text: 'text-white/80'
+    }
   ];
 
   return (
@@ -65,13 +66,16 @@ export default function Membership() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map((plan, i) => (
-              <div key={i} className={`glass-card p-8 flex flex-col items-center text-center transition-all duration-500 border ${plan.color} relative overflow-hidden group`}>
+              <div key={i} className={`glass-card p-8 flex flex-col items-center text-center transition-all duration-500 border ${plan.color} relative overflow-hidden group ${plan.isPopular ? 'bg-black/60 shadow-[0_0_30px_rgba(212,175,55,0.1)]' : ''}`}>
                 <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity`}></div>
-                <h3 className="text-2xl font-serif text-white mb-2">{plan.name}</h3>
-                <div className="text-xs text-white/40 uppercase tracking-widest mb-6">{plan.period}</div>
-                <div className={`text-2xl lg:text-3xl font-bold mb-8 ${plan.text}`}>{plan.price}</div>
+                {plan.isPopular && (
+                  <div className="absolute top-0 inset-x-0 mx-auto w-max px-4 py-1 bg-[#D4AF37] text-black text-[10px] font-bold uppercase tracking-widest rounded-b-md">
+                    Most Popular
+                  </div>
+                )}
+                <h3 className={`text-2xl font-serif mt-4 mb-8 ${plan.isPopular ? 'text-[#D4AF37]' : 'text-white'}`}>{plan.name}</h3>
                 
                 <ul className="space-y-4 mb-10 w-full text-left text-white/70 text-sm flex-grow">
                   {plan.features.map((feature, idx) => (
@@ -82,13 +86,54 @@ export default function Membership() {
                 </ul>
                 
                 <Link 
-                  href="/apply" 
-                  className="w-full py-4 border border-white/20 text-white hover:bg-white hover:text-black hover:border-white transition-all uppercase tracking-widest text-xs font-semibold mt-auto"
+                  href="#consultation" 
+                  className={`w-full py-4 transition-all uppercase tracking-widest text-xs font-semibold mt-auto flex justify-center items-center gap-2 group ${plan.isPopular ? 'bg-[#D4AF37] text-black hover:bg-white' : 'border border-white/20 text-white hover:border-white'}`}
                 >
-                  Apply Now
+                  Request Consultation
                 </Link>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lead Capture Form */}
+      <section id="consultation" className="py-24 px-6 bg-[#050505] border-t border-white/5">
+        <div className="container mx-auto max-w-4xl">
+          <div className="glass-card p-10 md:p-14 border border-[#D4AF37]/20 relative overflow-hidden text-center">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-[80px]"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-[80px]"></div>
+            
+            <h2 className="text-3xl md:text-4xl font-serif text-white mb-4 relative z-10">Request Membership Consultation</h2>
+            <p className="text-white/60 mb-10 text-sm max-w-xl mx-auto relative z-10">
+              Please provide your details below and our membership team will contact you shortly to discuss your requirements.
+            </p>
+
+            <form className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <div className="space-y-2">
+                <label className="text-white/70 text-xs uppercase tracking-widest font-semibold ml-1">Full Name</label>
+                <input type="text" placeholder="Enter your full name" className="w-full bg-black/50 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37]/50 transition-colors" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-white/70 text-xs uppercase tracking-widest font-semibold ml-1">Mobile Number</label>
+                <input type="tel" placeholder="Enter your mobile number" className="w-full bg-black/50 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37]/50 transition-colors" />
+              </div>
+              <div className="space-y-2 md:col-span-2">
+                <label className="text-white/70 text-xs uppercase tracking-widest font-semibold ml-1">Membership Interest</label>
+                <select defaultValue="" className="w-full bg-black/50 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37]/50 transition-colors appearance-none">
+                  <option value="" disabled>Select Membership Tier</option>
+                  <option value="individual">Individual</option>
+                  <option value="couple">Couple</option>
+                  <option value="family">Family</option>
+                  <option value="corporate">Corporate</option>
+                </select>
+              </div>
+              <div className="md:col-span-2 mt-4 text-center">
+                <button type="submit" className="inline-flex items-center gap-3 px-10 py-4 bg-[#D4AF37] text-black font-semibold hover:bg-white transition-colors uppercase tracking-widest text-sm shadow-[0_0_20px_rgba(212,175,55,0.2)]">
+                  Submit Enquiry <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
