@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LocationSection from '@/components/LocationSection';
-import { Star, Shield, Users, ArrowRight, ChevronDown, Check, Award, Camera, Dumbbell, Heart } from 'lucide-react';
+import { Star, Shield, Users, ArrowRight, ChevronDown, Check, Award, Camera, Dumbbell, Heart, MapPin, Quote, Music, Coffee, Droplets } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -12,12 +12,16 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 pb-32">
         {/* Cinematic background with vignette */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/images/amenities-bg.png"
-            alt="The Stellaar Luxury Lounge"
-            className="w-full h-full object-cover opacity-60 scale-110 animate-[kenburns_30s_ease-in-out_infinite_alternate]"
-          />
+        <div className="absolute inset-0 z-0 bg-black">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-60 scale-105"
+          >
+            <source src="/videos/club-bg.mp4" type="video/mp4" />
+          </video>
           {/* Overlays for depth and cinematic lighting */}
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/30 to-black"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60"></div>
@@ -46,37 +50,45 @@ export default function Home() {
           </div>
 
           {/* Headline */}
-          <h1 className="relative font-serif text-white mb-8 leading-[1.1] flex flex-col items-center fade-in delay-100">
-            <span className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-light tracking-tight drop-shadow-2xl">
-              Exclusive
+          <h1 className="relative font-serif text-white mb-8 leading-[1.1] flex flex-col items-center fade-in delay-100 text-center">
+            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-light tracking-tight drop-shadow-2xl">
+              Nagpur&apos;s Premium
             </span>
-            <span className="text-shimmer text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] font-serif my-1 drop-shadow-[0_0_20px_rgba(201,161,74,0.25)]">
-              Premium
-            </span>
-            <span className="text-2xl sm:text-4xl md:text-5xl lg:text-[4rem] font-light tracking-wider drop-shadow-2xl uppercase">
+            <span className="text-shimmer text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-serif my-1 drop-shadow-[0_0_20px_rgba(201,161,74,0.25)]">
               Family Club
+            </span>
+            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-light tracking-wider drop-shadow-2xl uppercase">
+              Experience
             </span>
           </h1>
 
           {/* Supporting Text */}
-          <p className="text-white/60 text-base sm:text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light tracking-wide leading-relaxed px-4 fade-in delay-200">
-            Where luxury meets lifestyle. <br className="hidden sm:block" /> Experience a community like no other.
+          <p className="text-white/80 text-sm sm:text-base md:text-lg mb-12 max-w-2xl mx-auto font-light tracking-[0.3em] uppercase leading-relaxed px-4 fade-in delay-200">
+            Luxury | Fitness | Dining | Events | Lifestyle
           </p>
 
           {/* Buttons Row */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto px-4 fade-in delay-300">
-            <Link
-              href="/contact"
-              className="group relative px-12 py-4 bg-gradient-to-r from-[#C9A14A] via-[#D4B55A] to-[#A8832C] text-black transition-all duration-500 uppercase tracking-[0.2em] text-xs font-bold w-full sm:w-auto text-center rounded-sm shadow-[0_0_30px_rgba(201,161,74,0.4)] hover:shadow-[0_0_50px_rgba(201,161,74,0.6)] hover:scale-105 flex items-center justify-center gap-2 pulse-glow"
-            >
-              Book a Visit <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto px-4 fade-in delay-300">
             <Link
               href="/membership"
-              className="group px-12 py-4 border border-[#C9A14A]/40 text-[#C9A14A] hover:border-[#C9A14A] hover:bg-[#C9A14A]/5 transition-all duration-500 uppercase tracking-[0.2em] text-xs font-bold w-full sm:w-auto text-center backdrop-blur-sm rounded-sm hover:scale-105"
+              className="group relative px-8 py-4 bg-gradient-to-r from-[#C9A14A] via-[#D4B55A] to-[#A8832C] text-black transition-all duration-500 uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold w-full sm:w-auto text-center rounded-sm shadow-[0_0_30px_rgba(201,161,74,0.4)] hover:shadow-[0_0_50px_rgba(201,161,74,0.6)] hover:scale-105 flex items-center justify-center gap-2 pulse-glow"
             >
-              Become a Member
+              Join Membership <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
+            <Link
+              href="/contact"
+              className="group px-8 py-4 border border-[#C9A14A]/40 text-[#C9A14A] hover:border-[#C9A14A] hover:bg-[#C9A14A]/5 transition-all duration-500 uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold w-full sm:w-auto text-center backdrop-blur-sm rounded-sm hover:scale-105"
+            >
+              Book a Visit
+            </Link>
+            <a
+              href="https://wa.me/917888005995"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group px-8 py-4 border border-[#25D366]/40 text-[#25D366] hover:border-[#25D366] hover:bg-[#25D366]/5 transition-all duration-500 uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold w-full sm:w-auto text-center backdrop-blur-sm rounded-sm hover:scale-105 flex items-center justify-center gap-2"
+            >
+              WhatsApp Now
+            </a>
           </div>
 
           {/* Stats & Affiliation Section */}
@@ -146,28 +158,25 @@ export default function Home() {
         </div>
       </div>
 
-        {/* ── Club in Numbers ── */}
-        <section className="py-14 bg-[#030303] border-y border-[#D4AF37]/10 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.06)_0%,transparent_70%)] pointer-events-none" />
-          <div className="container mx-auto max-w-6xl px-6 relative z-10">
-            <div className="grid grid-cols-2 md:grid-cols-4">
-              {[
-                { value: '100', suffix: '', label: 'Elite Member Families' },
-                { value: '20', suffix: '+', label: 'Premium Amenities' },
-                { value: '170', suffix: '+', label: 'Global Club Affiliations' },
-                { value: '5', suffix: '★', label: 'Star Luxury Standard' },
-              ].map((stat, i) => (
-                <div key={i} className="group relative flex flex-col items-center text-center py-8 px-4 cursor-default">
-                  {i < 3 && <div className="hidden md:block absolute right-0 top-1/4 h-1/2 w-px bg-[#D4AF37]/15" />}
-                  <div className="text-4xl md:text-5xl font-serif font-bold text-[#D4AF37] mb-2 leading-none tracking-tight group-hover:scale-105 transition-transform duration-500">
-                    {stat.value}<span className="text-[#D4AF37]/55 text-3xl">{stat.suffix}</span>
-                  </div>
-                  <div className="text-white/35 text-[10px] uppercase tracking-[0.3em] leading-snug">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+      {/* ── Trust Bar ── */}
+      <section className="py-14 bg-[#030303] border-y border-[#D4AF37]/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.06)_0%,transparent_70%)] pointer-events-none" />
+        <div className="container mx-auto max-w-6xl px-6 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
+            {[
+              { label: 'Trusted by 500+ Families', icon: Users },
+              { label: 'Prime Ajni Location', icon: MapPin },
+              { label: 'Premium Amenities', icon: Star },
+            ].map((stat, i) => (
+              <div key={i} className="group relative flex flex-col items-center text-center py-8 px-4 cursor-default">
+                {i < 2 && <div className="hidden md:block absolute right-0 top-1/4 h-1/2 w-px bg-[#D4AF37]/15" />}
+                <stat.icon className="w-8 h-8 text-[#D4AF37] mb-4 opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                <div className="text-white/80 text-sm md:text-base uppercase tracking-[0.2em] leading-snug">{stat.label}</div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Editorial About Preview */}
       <section className="py-32 px-6 relative bg-gradient-to-b from-black to-[#050505]">
@@ -498,7 +507,7 @@ export default function Home() {
       {/* Location Section */}
       <LocationSection />
 
-      {/* ─── Premium Feature Cards ─── */}
+      {/* ─── Premium Amenities Preview ─── */}
       <section className="py-28 bg-black relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#C9A14A]/5 rounded-full blur-[140px]"></div>
@@ -508,16 +517,18 @@ export default function Home() {
           {/* Header */}
           <div className="text-center mb-20">
             <p className="text-[#C9A14A] tracking-[0.35em] uppercase text-xs font-bold mb-4">Discover More</p>
-            <h2 className="text-3xl md:text-4xl font-serif text-white">Explore Our World</h2>
+            <h2 className="text-3xl md:text-4xl font-serif text-white">Premium Amenities</h2>
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {[
-              { title: 'About Us', desc: 'A club. A community. A lifestyle built for the distinguished few.', image: '/images/reception.jpg', link: '/about', Icon: Users, btn: 'Discover More' },
-              { title: 'Amenities', desc: 'World-class amenities designed for you and your family.', image: '/images/pool.jpg', link: '/amenities', Icon: Dumbbell, btn: 'Explore More' },
-              { title: 'Gallery', desc: 'A glimpse into the extraordinary Stellaar experience.', image: '/images/gallery-1.jpg', link: '/gallery', Icon: Camera, btn: 'View Gallery' },
-            ].map(({ title, desc, image, link, Icon, btn }, i) => (
+              { title: 'Swimming Pool', desc: 'Olympic-sized luxury pool for relaxation and fitness.', image: '/images/pool.jpg', link: '/amenities', Icon: Droplets },
+              { title: 'Fitness Gym', desc: 'State-of-the-art equipment and personal training.', image: '/images/gallery-3.jpg', link: '/amenities', Icon: Dumbbell },
+              { title: 'Restaurant', desc: 'Fine dining culinary experiences with global cuisines.', image: '/images/dining.jpg', link: '/restaurant', Icon: Coffee },
+              { title: 'Banquet Hall', desc: 'Elegant spaces for weddings and corporate events.', image: '/images/gallery-2.jpg', link: '/banquet', Icon: Award },
+              { title: 'Family Recreation', desc: 'Dedicated zones for children and family bonding.', image: '/images/gallery-4.jpg', link: '/amenities', Icon: Users },
+            ].map(({ title, desc, image, link, Icon }, i) => (
               <Link
                 href={link} key={i}
                 className="group relative block rounded-[20px] overflow-hidden border border-white/10 hover:border-[#C9A14A]/50 transition-all duration-700 hover:-translate-y-2 shadow-[0_8px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_8px_60px_rgba(201,161,74,0.18)]"
@@ -529,22 +540,82 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 flex flex-col items-center justify-end min-h-[440px] p-9 text-center">
+                <div className="relative z-10 flex flex-col items-center justify-end min-h-[380px] p-9 text-center">
                   {/* Glowing circular icon */}
                   <div className="mb-6 w-[68px] h-[68px] rounded-full bg-black/50 backdrop-blur-md border border-[#C9A14A]/40 flex items-center justify-center shadow-[0_0_22px_rgba(201,161,74,0.35)] group-hover:shadow-[0_0_40px_rgba(201,161,74,0.6)] group-hover:border-[#C9A14A]/70 group-hover:scale-110 transition-all duration-500">
                     <Icon className="w-7 h-7 text-[#C9A14A] drop-shadow-[0_0_6px_rgba(201,161,74,0.7)]" />
                   </div>
 
-                  <h3 className="text-3xl font-serif text-white mb-3 group-hover:text-[#C9A14A] transition-colors duration-500">{title}</h3>
+                  <h3 className="text-2xl font-serif text-white mb-3 group-hover:text-[#C9A14A] transition-colors duration-500">{title}</h3>
                   <p className="text-white/55 text-sm leading-relaxed mb-7 font-light">{desc}</p>
 
                   {/* Gold outlined button */}
                   <span className="inline-flex items-center gap-2 px-6 py-2.5 border border-[#C9A14A] text-[#C9A14A] text-[11px] uppercase tracking-widest rounded-full font-semibold group-hover:bg-[#C9A14A] group-hover:text-black transition-all duration-500 shadow-[0_0_12px_rgba(201,161,74,0.2)] group-hover:shadow-[0_0_24px_rgba(201,161,74,0.45)]">
-                    {btn}
+                    Explore More
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Banquet & Restaurant Promotions ─── */}
+      <section className="py-0 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          {/* Banquet */}
+          <div className="relative h-[600px] overflow-hidden group">
+            <img src="/images/gallery-5.jpg" alt="Banquet Events" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105" />
+            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-500"></div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
+              <Award className="w-12 h-12 text-[#C9A14A] mb-6 drop-shadow-lg" />
+              <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Host Grand Events</h2>
+              <p className="text-white/80 max-w-md mx-auto mb-8 font-light text-lg">Celebrate your weddings, birthdays, and corporate events in our premium banquet halls.</p>
+              <Link href="/banquet" className="px-8 py-3 bg-[#C9A14A] text-black font-bold uppercase tracking-widest text-xs hover:bg-white transition-colors duration-300">
+                Get Event Quote
+              </Link>
+            </div>
+          </div>
+          {/* Restaurant */}
+          <div className="relative h-[600px] overflow-hidden group">
+            <img src="/images/dining.jpg" alt="Fine Dining" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105" />
+            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-500"></div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
+              <Coffee className="w-12 h-12 text-[#C9A14A] mb-6 drop-shadow-lg" />
+              <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Fine Dining</h2>
+              <p className="text-white/80 max-w-md mx-auto mb-8 font-light text-lg">Indulge in exquisite culinary experiences with world-class chefs and perfect ambience.</p>
+              <Link href="/restaurant" className="px-8 py-3 bg-[#C9A14A] text-black font-bold uppercase tracking-widest text-xs hover:bg-white transition-colors duration-300">
+                Reserve Table
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Testimonials ─── */}
+      <section className="py-28 bg-[#050505] relative overflow-hidden">
+        <div className="container mx-auto max-w-6xl px-6 relative z-10">
+          <div className="text-center mb-16">
+            <Quote className="w-10 h-10 text-[#C9A14A]/30 mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl font-serif text-white mb-3">Member Experiences</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { text: "The perfect place for our family weekends. The amenities are world-class and the staff is incredibly hospitable.", name: "Rajesh K.", type: "Family Member" },
+              { text: "We hosted our corporate event at the banquet hall. Everything from catering to decor was managed flawlessly.", name: "Priya S.", type: "Corporate Member" },
+              { text: "A true sanctuary in Nagpur. The gym and pool facilities rival any 5-star resort I have visited globally.", name: "Amit D.", type: "Individual Member" },
+            ].map((t, i) => (
+              <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:border-[#C9A14A]/40 hover:-translate-y-2 transition-all duration-500 glass-card">
+                <div className="flex text-[#C9A14A] mb-6 gap-1">
+                  {[...Array(5)].map((_, idx) => <Star key={idx} className="w-4 h-4 fill-[#C9A14A]" />)}
+                </div>
+                <p className="text-white/70 italic mb-8 font-light leading-relaxed">&quot;{t.text}&quot;</p>
+                <div>
+                  <h4 className="text-white font-serif">{t.name}</h4>
+                  <p className="text-[#C9A14A] text-xs uppercase tracking-widest mt-1">{t.type}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -567,26 +638,26 @@ export default function Home() {
             <div>
               <p className="text-[#C9A14A] tracking-[0.35em] uppercase text-xs font-bold mb-6">The Stellaar Experience</p>
               <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight mb-6">
-                Experience The <br />
-                <span className="text-shimmer">Stellaar Lifestyle</span>
+                Experience <br />
+                <span className="text-shimmer">Luxury Living Today</span>
               </h2>
-              <p className="text-white/55 text-lg font-light mb-12">Luxury. Comfort. Community all in one place.</p>
+              <p className="text-white/55 text-lg font-light mb-12">Take the first step towards a premium lifestyle for your entire family.</p>
 
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <Link
-                  href="/contact"
+                  href="/membership"
                   className="group px-9 py-4 bg-gradient-to-r from-[#C9A14A] to-[#A8832C] text-black font-semibold uppercase tracking-widest text-xs inline-flex items-center gap-3 rounded-sm shadow-[0_0_22px_rgba(201,161,74,0.35)] hover:shadow-[0_0_40px_rgba(201,161,74,0.55)] hover:from-[#D4B55A] hover:to-[#C9A14A] transition-all duration-500 pulse-glow"
                 >
-                  Book a Visit
+                  Join Now
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  href="/membership"
+                  href="/contact"
                   className="px-9 py-4 border border-[#C9A14A]/60 text-[#C9A14A] font-semibold uppercase tracking-widest text-xs inline-flex items-center gap-3 rounded-sm hover:bg-[#C9A14A]/10 hover:border-[#C9A14A] transition-all duration-500"
                 >
-                  Become a Member
+                  Book Visit
                 </Link>
               </div>
             </div>

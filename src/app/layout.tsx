@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import StickyButtons from "@/components/StickyButtons";
 
 export const metadata: Metadata = {
   title: "The Stellaar – Premium Family Club | Nagpur",
@@ -20,6 +21,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-black text-white">
         {children}
+        <StickyButtons />
       </body>
     </html>
   );
