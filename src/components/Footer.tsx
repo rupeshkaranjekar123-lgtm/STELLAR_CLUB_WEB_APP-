@@ -71,7 +71,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0" />
-                <span className="leading-tight">The Stellar Premium Family Club, <br />439G+439, Prashant Nagar, <br />Samarth Nagar East, Nagpur, Maharashtra 440015</span>
+                <span className="leading-tight">The Stellaar Premium Family Club, <br />439G+439, Prashant Nagar, <br />Samarth Nagar East, Nagpur, Maharashtra 440015</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Phone className="w-5 h-5 text-[#D4AF37] shrink-0" />
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-white/40">
-          <p>&copy; {new Date().getFullYear()} The Stellar Premium Family Club. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} The Stellaar Premium Family Club. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <Link href="#" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-[#D4AF37] transition-colors">Terms of Service</Link>

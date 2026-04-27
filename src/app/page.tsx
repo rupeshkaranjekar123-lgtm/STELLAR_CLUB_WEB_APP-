@@ -15,7 +15,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img
             src="/images/amenities-bg.png"
-            alt="The Stellar Luxury Lounge"
+            alt="The Stellaar Luxury Lounge"
             className="w-full h-full object-cover opacity-60 scale-110 animate-[kenburns_30s_ease-in-out_infinite_alternate]"
           />
           {/* Overlays for depth and cinematic lighting */}
@@ -181,7 +181,7 @@ export default function Home() {
                 A Legacy of <br /><span className="text-shimmer">Luxury</span>
               </h2>
               <p className="text-white/60 leading-relaxed font-light text-lg">
-                The Stellar is not just a club; it is a statement. Designed for the elite few, we offer a sanctuary where families can bond, professionals can network, and individuals can rejuvenate in absolute luxury.
+                The Stellaar is not just a club; it is a statement. Designed for the elite few, we offer a sanctuary where families can bond, professionals can network, and individuals can rejuvenate in absolute luxury.
               </p>
 
               <div className="pt-6 space-y-5">
@@ -236,7 +236,7 @@ export default function Home() {
       <section className="py-24 bg-[#050505] overflow-hidden">
         <div className="text-center mb-16">
           <Shield className="w-8 h-8 text-[#D4AF37] mx-auto mb-4 opacity-80" />
-          <h2 className="text-3xl md:text-4xl font-serif text-white mb-3">Life at Stellar</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-white mb-3">Life at Stellaar</h2>
           <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">A Glimpse of the Extraordinary</p>
         </div>
 
@@ -269,7 +269,7 @@ export default function Home() {
               >
                 <img
                   src={img}
-                  alt={`Stellar Life ${i}`}
+                  alt={`Stellaar Life ${i}`}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover/img:bg-black/10 transition-colors duration-500 flex items-center justify-center">
@@ -403,7 +403,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Stellar Circle CTA ─── */}
+      {/* ─── Stellaar Circle CTA ─── */}
       <section className="relative py-32 overflow-hidden bg-black">
         {/* Cinematic background */}
         <div className="absolute inset-0">
@@ -458,7 +458,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight mb-4">
                 Become Part of <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9A14A] via-[#F0D080] to-[#A8832C]">
-                  The Stellar Circle
+                  The Stellaar Circle
                 </span>
               </h2>
 
@@ -516,7 +516,7 @@ export default function Home() {
             {[
               { title: 'About Us', desc: 'A club. A community. A lifestyle built for the distinguished few.', image: '/images/reception.jpg', link: '/about', Icon: Users, btn: 'Discover More' },
               { title: 'Amenities', desc: 'World-class amenities designed for you and your family.', image: '/images/pool.jpg', link: '/amenities', Icon: Dumbbell, btn: 'Explore More' },
-              { title: 'Gallery', desc: 'A glimpse into the extraordinary Stellar experience.', image: '/images/gallery-1.jpg', link: '/gallery', Icon: Camera, btn: 'View Gallery' },
+              { title: 'Gallery', desc: 'A glimpse into the extraordinary Stellaar experience.', image: '/images/gallery-1.jpg', link: '/gallery', Icon: Camera, btn: 'View Gallery' },
             ].map(({ title, desc, image, link, Icon, btn }, i) => (
               <Link
                 href={link} key={i}
@@ -554,7 +554,7 @@ export default function Home() {
       <section className="relative py-28 bg-[#060606] overflow-hidden">
         {/* Ambient background */}
         <div className="absolute inset-0">
-          <img src="/images/dining.png" alt="Stellar Lifestyle" className="w-full h-full object-cover opacity-15" />
+          <img src="/images/dining.png" alt="Stellaar Lifestyle" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-black/80"></div>
         </div>
         <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-[#C9A14A]/7 rounded-full blur-[110px] pointer-events-none"></div>
@@ -565,10 +565,10 @@ export default function Home() {
 
             {/* Left: Text */}
             <div>
-              <p className="text-[#C9A14A] tracking-[0.35em] uppercase text-xs font-bold mb-6">The Stellar Experience</p>
+              <p className="text-[#C9A14A] tracking-[0.35em] uppercase text-xs font-bold mb-6">The Stellaar Experience</p>
               <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight mb-6">
                 Experience The <br />
-                <span className="text-shimmer">Stellar Lifestyle</span>
+                <span className="text-shimmer">Stellaar Lifestyle</span>
               </h2>
               <p className="text-white/55 text-lg font-light mb-12">Luxury. Comfort. Community all in one place.</p>
 

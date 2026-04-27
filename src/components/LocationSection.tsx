@@ -37,7 +37,7 @@ export default function LocationSection() {
                 <div>
                   <h3 className="text-white font-serif text-xl mb-2">Location</h3>
                   <p className="text-white/60 text-sm leading-relaxed">
-                    The Stellar Premium Family Club,<br/>
+                    The Stellaar Premium Family Club,<br/>
                     439G+439, Prashant Nagar,<br/>
                     Samarth Nagar East, Nagpur, Maharashtra 440015
                   </p>

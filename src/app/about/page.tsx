@@ -14,7 +14,7 @@ export default function About() {
         <div className="absolute inset-0">
           <img
             src="/images/gallery-1.jpg"
-            alt="The Stellar Interior"
+            alt="The Stellaar Interior"
             className="w-full h-full object-cover scale-105 opacity-80"
           />
           <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
@@ -33,7 +33,7 @@ export default function About() {
             </svg>
             <div className="flex items-center gap-6">
               <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#D4AF37]"></div>
-              <span className="text-[#D4AF37] tracking-[0.4em] uppercase text-sm font-semibold">The Stellar</span>
+              <span className="text-[#D4AF37] tracking-[0.4em] uppercase text-sm font-semibold">The Stellaar</span>
               <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#D4AF37]"></div>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function About() {
             <div className="relative h-[550px] overflow-hidden">
               <img
                 src="/images/reception.jpg"
-                alt="The Stellar Reception"
+                alt="The Stellaar Reception"
                 className="w-full h-full object-cover"
               />
               {/* Gold accent frame */}
@@ -135,16 +135,16 @@ export default function About() {
             </div>
             <div className="space-y-8">
               <p className="text-[#D4AF37] tracking-[0.3em] uppercase text-xs font-bold">Our Story</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-white leading-snug">The Vision Behind <span className="text-[#D4AF37]">The Stellar</span></h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-white leading-snug">The Vision Behind <span className="text-[#D4AF37]">The Stellaar</span></h2>
               <div className="space-y-5 text-white/60 font-light text-base leading-relaxed">
                 <p>
-                  The Stellar was conceived with a singular vision: to create an oasis of unparalleled luxury for Nagpur&apos;s elite. We have built a community that encourages both our development teams and members to dream up and create the most extraordinary experiences imaginable.
+                  The Stellaar was conceived with a singular vision: to create an oasis of unparalleled luxury for Nagpur&apos;s elite. We have built a community that encourages both our development teams and members to dream up and create the most extraordinary experiences imaginable.
                 </p>
                 <p>
                   Our inaugural development sets the gold standard for a premium family club complete with state of the art wellness centers, luxurious five-star amenities, curated fine dining, and a team dedicated to delivering perfection with every interaction.
                 </p>
                 <p>
-                  Every Stellar property is a testament to our commitment to excellence delivering an elite standard of service that is truly unmatched in Central India.
+                  Every Stellaar property is a testament to our commitment to excellence delivering an elite standard of service that is truly unmatched in Central India.
                 </p>
               </div>
               <Link href="/amenities" className="inline-flex items-center gap-3 text-[#D4AF37] hover:text-white transition-all uppercase tracking-widest text-sm font-semibold group">
@@ -203,7 +203,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* The Stellar Difference */}
+      {/* The Stellaar Difference */}
       <section className="py-24 px-6 bg-[#050505] relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent"></div>
         <div className="container mx-auto max-w-7xl">
@@ -211,7 +211,7 @@ export default function About() {
             <h4 className="flex items-center justify-center gap-4 text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold mb-6">
               <span className="w-8 h-[1px] bg-[#D4AF37]"></span> Our Pillars <span className="w-8 h-[1px] bg-[#D4AF37]"></span>
             </h4>
-            <h2 className="text-4xl md:text-6xl font-serif text-white">The Stellar Difference</h2>
+            <h2 className="text-4xl md:text-6xl font-serif text-white">The Stellaar Difference</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
@@ -242,10 +242,10 @@ export default function About() {
               <h2 className="text-4xl md:text-5xl font-serif text-white leading-snug">A Home Away <span className="text-[#D4AF37]">From Home</span></h2>
               <div className="space-y-5 text-white/60 font-light text-base leading-relaxed">
                 <p>
-                  The Stellar is more than a club — it&apos;s a living, breathing community of like minded individuals and families. Our curated social calendar ensures there is always something to look forward to from private wine evenings to family sporting events and cultural galas.
+                  The Stellaar is more than a club — it&apos;s a living, breathing community of like minded individuals and families. Our curated social calendar ensures there is always something to look forward to from private wine evenings to family sporting events and cultural galas.
                 </p>
                 <p>
-                  With spouse and children included in every membership, The Stellar is engineered around the concept of family togetherness, ensuring that every member of your household finds their own sanctuary within our walls.
+                  With spouse and children included in every membership, The Stellaar is engineered around the concept of family togetherness, ensuring that every member of your household finds their own sanctuary within our walls.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-6 pt-4">
@@ -266,7 +266,7 @@ export default function About() {
             <div className="relative h-[550px] overflow-hidden order-1 lg:order-2">
               <img
                 src="/images/family.jpg"
-                alt="Family at The Stellar"
+                alt="Family at The Stellaar"
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-4 right-4 w-24 h-24 border-r-2 border-t-2 border-[#D4AF37]/60"></div>
@@ -286,7 +286,7 @@ export default function About() {
             </div>
             <div className="hidden md:block w-[1px] h-16 bg-white/10"></div>
             <p className="text-white/70 text-lg font-light max-w-xl leading-relaxed">
-              As a Stellar member, you gain access to a global network of over 170 elite clubs across India and worldwide through our exclusive reciprocal affiliation program.
+              As a Stellaar member, you gain access to a global network of over 170 elite clubs across India and worldwide through our exclusive reciprocal affiliation program.
             </p>
           </div>
         </div>
@@ -300,7 +300,7 @@ export default function About() {
         </div>
         <div className="container mx-auto max-w-4xl relative z-10">
           <p className="text-[#D4AF37] tracking-[0.3em] uppercase text-xs font-bold mb-6">Join the Circle</p>
-          <h2 className="text-3xl md:text-5xl font-serif text-white mb-8">Ready to Experience <span className="text-[#D4AF37]">The Stellar?</span></h2>
+          <h2 className="text-3xl md:text-5xl font-serif text-white mb-8">Ready to Experience <span className="text-[#D4AF37]">The Stellaar?</span></h2>
           <p className="text-white/60 mb-12 max-w-xl mx-auto font-light text-lg leading-relaxed">
             Limited to only 100 exclusive families. Apply today and become part of Nagpur&apos;s most prestigious private club.
           </p>
