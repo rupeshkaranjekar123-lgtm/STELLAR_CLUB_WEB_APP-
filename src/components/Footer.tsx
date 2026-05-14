@@ -18,7 +18,7 @@ const YoutubeIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-[#050505] border-t border-[#D4AF37]/20 pt-20 pb-10 text-white/80">
+    <footer className="bg-[#0A0A0A] border-t border-[#C9A14A]/20 pt-20 pb-10 text-white/80">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
@@ -33,10 +33,10 @@ export default function Footer() {
               Nagpur&apos;s most exclusive premium family club. Limited to 100 members. Experience luxury, wellness, and elite networking.
             </p>
             <div className="flex gap-4">
-              <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37]/60 hover:text-[#D4AF37] hover:border-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all">
+              <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full border border-[#C9A14A]/30 flex items-center justify-center text-[#C9A14A]/60 hover:text-[#C9A14A] hover:border-[#C9A14A] hover:bg-[#C9A14A]/10 transition-all">
                 <InstagramIcon />
               </a>
-              <a href="#" aria-label="YouTube" className="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37]/60 hover:text-[#D4AF37] hover:border-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all">
+              <a href="#" aria-label="YouTube" className="w-10 h-10 rounded-full border border-[#C9A14A]/30 flex items-center justify-center text-[#C9A14A]/60 hover:text-[#C9A14A] hover:border-[#C9A14A] hover:bg-[#C9A14A]/10 transition-all">
                 <YoutubeIcon />
               </a>
             </div>
@@ -45,14 +45,14 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-serif text-xl mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><Link href="/" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Home</Link></li>
-              <li><Link href="/about" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">About Us</Link></li>
-              <li><Link href="/amenities" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Amenities</Link></li>
-              <li><Link href="/restaurant" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Restaurant</Link></li>
-              <li><Link href="/banquet" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Banquet</Link></li>
-              <li><Link href="/gallery" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Gallery</Link></li>
-              <li><Link href="/membership" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Membership</Link></li>
-              <li><Link href="/contact" className="hover:text-[#D4AF37] transition-colors text-sm uppercase tracking-wider">Contact</Link></li>
+              <li><Link href="/" className="hover:text-[#C9A14A] transition-colors text-sm uppercase tracking-wider">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#C9A14A] transition-colors text-sm uppercase tracking-wider">About Us</Link></li>
+              <li><Link href="/amenities" className="hover:text-[#C9A14A] transition-colors text-sm uppercase tracking-wider">Amenities</Link></li>
+              <li><Link href="/restaurant" className="hover:text-[#C9A14A] transition-colors text-sm uppercase tracking-wider">Restaurant</Link></li>
+              <li><Link href="/banquet" className="hover:text-[#C9A14A] transition-colors text-sm uppercase tracking-wider">Banquet</Link></li>
+              <li><Link href="/gallery" className="hover:text-[#C9A14A] transition-colors text-sm uppercase tracking-wider">Gallery</Link></li>
+              <li><Link href="/membership" className="hover:text-[#C9A14A] transition-colors text-sm uppercase tracking-wider">Membership</Link></li>
+              <li><Link href="/contact" className="hover:text-[#C9A14A] transition-colors text-sm uppercase tracking-wider">Contact</Link></li>
             </ul>
           </div>
 
@@ -72,15 +72,15 @@ export default function Footer() {
             <h3 className="text-white font-serif text-xl mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
-                <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0" />
+                <MapPin className="w-5 h-5 text-[#C9A14A] shrink-0" />
                 <span className="leading-tight">The Stellaar Premium Family Club, <br />439G+439, Prashant Nagar, <br />Samarth Nagar East, Nagpur, Maharashtra 440015</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
-                <Phone className="w-5 h-5 text-[#D4AF37] shrink-0" />
+                <Phone className="w-5 h-5 text-[#C9A14A] shrink-0" />
                 <span>+91 7888005995, +91 8668647116</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
-                <Mail className="w-5 h-5 text-[#D4AF37] shrink-0" />
+                <Mail className="w-5 h-5 text-[#C9A14A] shrink-0" />
                 <span>membership@thestellaar.com</span>
               </li>
             </ul>
@@ -90,8 +90,8 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-white/40">
           <p>&copy; {new Date().getFullYear()} The Stellaar Premium Family Club. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-[#D4AF37] transition-colors">Terms of Service</Link>
+            <Link href="#" className="hover:text-[#C9A14A] transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-[#C9A14A] transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

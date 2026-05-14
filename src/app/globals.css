@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gold: #D4AF37;
-  --color-gold-dark: #B5952F;
+  --color-gold: #C9A14A;
+  --color-gold-soft: #D4B06A;
+  --color-gold-dark: #B8924F;
   --color-black: #000000;
-  --color-dark: #111111;
-  --color-gray-dark: #222222;
+  --color-dark: #0A0A0A;
+  --color-gray-dark: #111111;
 
-  --font-primary: 'Cinzel', serif;
+  --font-primary: 'Playfair Display', serif;
   --font-accent: 'Cormorant Garamond', serif;
-  --font-serif: 'Cinzel', serif;
+  --font-serif: 'Playfair Display', serif;
   --font-secondary: 'Inter', sans-serif;
 }
 
@@ -121,44 +122,44 @@ section {
 
 /* ─── Color Utilities ─────────────────────────── */
 .text-gold {
-  color: #D4AF37;
+  color: #C9A14A;
 }
 
 .bg-gold {
-  background-color: #D4AF37;
+  background-color: #C9A14A;
 }
 
 .border-gold {
-  border-color: #D4AF37;
+  border-color: #C9A14A;
 }
 
 /* ─── Glassmorphism ───────────────────────────── */
 .glass {
-  background: rgba(17, 17, 17, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .glass-card {
-  background: linear-gradient(145deg, rgba(34,34,34,0.6) 0%, rgba(17,17,17,0.8) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(212, 175, 55, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background: linear-gradient(145deg, rgba(22,22,22,0.4) 0%, rgba(10,10,10,0.8) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5);
 }
 
 .glass-card:hover {
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(201, 161, 74, 0.3);
+  box-shadow: 0 10px 40px 0 rgba(201, 161, 74, 0.08);
 }
 
 /* ─── Glow Effects ────────────────────────────── */
 .gold-glow {
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 20px rgba(201, 161, 74, 0.15);
 }
 
 .gold-glow-hover:hover {
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 30px rgba(201, 161, 74, 0.25);
 }
 
 /* ─── Animations ──────────────────────────────── */
@@ -276,7 +277,7 @@ section {
   100% { background-position:  200% center; }
 }
 .text-shimmer {
-  background: linear-gradient(90deg, #A8832C 0%, #F0D080 35%, #D4AF37 55%, #A8832C 100%);
+  background: linear-gradient(90deg, #B8924F 0%, #D4B06A 35%, #C9A14A 55%, #B8924F 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -285,11 +286,11 @@ section {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0   rgba(212,175,55,0); }
-  50%       { box-shadow: 0 0 24px rgba(212,175,55,0.25); }
+  0%, 100% { box-shadow: 0 0 0   rgba(201,161,74,0); }
+  50%       { box-shadow: 0 0 24px rgba(201,161,74,0.15); }
 }
 .pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
+  animation: pulse-glow 4s ease-in-out infinite;
 }
 
 @keyframes draw-line {

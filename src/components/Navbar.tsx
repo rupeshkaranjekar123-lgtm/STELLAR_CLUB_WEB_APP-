@@ -54,15 +54,19 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href} 
-                href={link.href}
-                className={`text-[10px] tracking-[0.3em] uppercase transition-all duration-300 hover:text-[#C9A14A] font-primary ${pathname === link.href ? 'text-[#C9A14A] font-bold' : 'text-white/70'}`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link 
+                  key={link.href} 
+                  href={link.href}
+                  className={`group relative text-[10px] tracking-[0.3em] uppercase transition-all duration-300 hover:text-[#C9A14A] font-secondary ${isActive ? 'text-[#C9A14A] font-medium' : 'text-white/70'}`}
+                >
+                  {link.label}
+                  <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 h-[1px] bg-[#C9A14A] transition-all duration-300 ${isActive ? 'w-1/2 opacity-100' : 'w-0 opacity-0 group-hover:w-1/3 group-hover:opacity-50'}`}></span>
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA Button */}

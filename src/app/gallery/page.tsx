@@ -43,11 +43,11 @@ export default function Gallery() {
 
       <section className="pt-40 pb-10 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-serif text-white mb-6">Gallery</h1>
-        <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs mb-12">A Glimpse of The Extraordinary</p>
+        <p className="text-[#C9A14A] tracking-[0.2em] uppercase text-xs mb-12">A Glimpse of The Extraordinary</p>
 
         {/* Informative Intro Section */}
         <div className="container mx-auto max-w-4xl text-center mb-16">
-          <div className="w-16 h-[1px] bg-[#D4AF37] mx-auto mb-8"></div>
+          <div className="w-16 h-[1px] bg-[#C9A14A] mx-auto mb-8"></div>
           <h2 className="text-xl md:text-2xl font-serif text-white mb-6 leading-relaxed">
             &quot;Step into a world where every detail is curated for perfection.&quot;
           </h2>
@@ -69,7 +69,7 @@ export default function Gallery() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2 rounded-full border border-[#D4AF37]/50 text-xs uppercase tracking-widest transition-all duration-300 ${activeCategory === cat ? 'bg-[#D4AF37] text-black font-bold' : 'text-white hover:bg-[#D4AF37]/20'}`}
+              className={`px-6 py-2 rounded-full border border-[#C9A14A]/50 text-xs uppercase tracking-widest transition-all duration-300 ${activeCategory === cat ? 'bg-[#C9A14A] text-black font-bold' : 'text-white hover:bg-[#C9A14A]/20'}`}
             >
               {cat}
             </button>
@@ -95,8 +95,8 @@ export default function Gallery() {
                 <div className="relative w-full h-auto aspect-[4/5]">
                   <video src={item.src} className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-16 h-16 rounded-full bg-black/50 border border-[#D4AF37]/50 flex items-center justify-center backdrop-blur-sm group-hover:bg-[#D4AF37]/20 transition-all">
-                      <Play className="w-6 h-6 text-[#D4AF37]" />
+                    <div className="w-16 h-16 rounded-full bg-black/50 border border-[#C9A14A]/50 flex items-center justify-center backdrop-blur-sm group-hover:bg-[#C9A14A]/20 transition-all">
+                      <Play className="w-6 h-6 text-[#C9A14A]" />
                     </div>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function Gallery() {
               
               {/* Info Overlay on Hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                <span className="text-[#D4AF37] uppercase tracking-[0.2em] text-[10px] font-bold mb-2">
+                <span className="text-[#C9A14A] uppercase tracking-[0.2em] text-[10px] font-bold mb-2">
                   {item.category}
                 </span>
                 <h3 className="text-white font-serif text-xl leading-tight translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -150,8 +150,8 @@ export default function Gallery() {
 
             {/* Information Container */}
             <div className="w-full md:w-1/3 text-left">
-              <div className="border border-white/10 p-8 bg-[#050505]/80 backdrop-blur-md rounded-sm">
-                <span className="inline-block border border-[#D4AF37] text-[#D4AF37] px-4 py-1 uppercase tracking-widest text-[10px] font-bold mb-6">
+              <div className="border border-white/10 p-8 bg-[#0A0A0A]/80 backdrop-blur-md rounded-sm">
+                <span className="inline-block border border-[#C9A14A] text-[#C9A14A] px-4 py-1 uppercase tracking-widest text-[10px] font-bold mb-6">
                   {selectedMedia.category}
                 </span>
                 <h2 className="text-2xl md:text-3xl font-serif text-white mb-6 leading-tight">

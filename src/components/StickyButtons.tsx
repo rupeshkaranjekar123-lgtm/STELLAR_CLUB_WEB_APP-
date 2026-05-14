@@ -17,7 +17,7 @@ export default function StickyButtons() {
       {/* Call Button */}
       <a
         href="tel:+917888005995"
-        className="w-14 h-14 bg-gradient-to-r from-[#C9A14A] to-[#A8832C] text-black rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(201,161,74,0.4)] hover:scale-110 hover:shadow-[0_0_30px_rgba(201,161,74,0.6)] transition-all duration-300 group pulse-glow"
+        className="w-14 h-14 bg-gradient-to-r from-[#C9A14A] to-[#B8924F] text-black rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(201,161,74,0.4)] hover:scale-110 hover:shadow-[0_0_30px_rgba(201,161,74,0.6)] transition-all duration-300 group pulse-glow"
         aria-label="Call Us"
       >
         <PhoneCall className="w-6 h-6 group-hover:scale-110 transition-transform" />

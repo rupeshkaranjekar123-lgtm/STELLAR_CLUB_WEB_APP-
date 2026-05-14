@@ -17,22 +17,22 @@ export default function LocationSection() {
       <div className={`container mx-auto px-6 max-w-7xl transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         
         <div className="text-center mb-16">
-          <div className="w-16 h-16 rounded-full bg-[#D4AF37]/10 flex items-center justify-center mx-auto mb-6 border border-[#D4AF37]/20 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
-            <MapPin className="w-8 h-8 text-[#D4AF37]" />
+          <div className="w-16 h-16 rounded-full bg-[#C9A14A]/10 flex items-center justify-center mx-auto mb-6 border border-[#C9A14A]/20 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
+            <MapPin className="w-8 h-8 text-[#C9A14A]" />
           </div>
           <h2 className="text-3xl md:text-4xl font-serif text-white mb-4">Find Us Easily</h2>
-          <p className="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">Visit our premium location in Nagpur</p>
+          <p className="text-[#C9A14A] tracking-[0.2em] uppercase text-xs font-bold">Visit our premium location in Nagpur</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           
           {/* Info Card */}
-          <div className="lg:col-span-1 p-10 bg-black/60 border border-white/10 rounded-2xl shadow-2xl relative z-10 flex flex-col justify-between hover:border-[#D4AF37]/30 transition-colors duration-500 group">
+          <div className="lg:col-span-1 p-10 bg-black/60 border border-white/10 rounded-2xl shadow-2xl relative z-10 flex flex-col justify-between hover:border-[#C9A14A]/30 transition-colors duration-500 group">
             <div className="space-y-10">
               
               <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#D4AF37]/10 transition-colors flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#D4AF37]/30">
-                  <MapPin className="w-5 h-5 text-[#D4AF37]" />
+                <div className="w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#C9A14A]/10 transition-colors flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#C9A14A]/30">
+                  <MapPin className="w-5 h-5 text-[#C9A14A]" />
                 </div>
                 <div>
                   <h3 className="text-white font-serif text-xl mb-2">Location</h3>
@@ -45,8 +45,8 @@ export default function LocationSection() {
               </div>
 
               <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#D4AF37]/10 transition-colors flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#D4AF37]/30">
-                  <Phone className="w-5 h-5 text-[#D4AF37]" />
+                <div className="w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#C9A14A]/10 transition-colors flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#C9A14A]/30">
+                  <Phone className="w-5 h-5 text-[#C9A14A]" />
                 </div>
                 <div>
                   <h3 className="text-white font-serif text-xl mb-2">Contact</h3>
@@ -58,8 +58,8 @@ export default function LocationSection() {
               </div>
 
               <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#D4AF37]/10 transition-colors flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#D4AF37]/30">
-                  <Clock className="w-5 h-5 text-[#D4AF37]" />
+                <div className="w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#C9A14A]/10 transition-colors flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#C9A14A]/30">
+                  <Clock className="w-5 h-5 text-[#C9A14A]" />
                 </div>
                 <div>
                   <h3 className="text-white font-serif text-xl mb-2">Hours</h3>
@@ -77,7 +77,7 @@ export default function LocationSection() {
                 href="https://maps.google.com/?q=The+Stellaar+-+Premium+Family+Club,+439G%2B439,+Prashant+Nagar,+Samarth+Nagar+East,+Nagpur,+Maharashtra+440015" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#D4AF37] text-black font-semibold rounded-lg hover:bg-white hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(212,175,55,0.4)]"
+                className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#C9A14A] text-black font-semibold rounded-lg hover:bg-white hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(212,175,55,0.4)]"
               >
                 Get Directions
                 <ExternalLink className="w-5 h-5" />
