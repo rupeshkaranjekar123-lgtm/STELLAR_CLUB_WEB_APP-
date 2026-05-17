@@ -86,10 +86,10 @@ export default function Membership() {
                 </ul>
                 
                 <Link 
-                  href="#consultation" 
+                  href="/apply" 
                   className={`w-full py-4 transition-all uppercase tracking-widest text-xs font-semibold mt-auto flex justify-center items-center gap-2 group ${plan.isPopular ? 'bg-[#C9A14A] text-black hover:bg-white' : 'border border-white/20 text-white hover:border-white'}`}
                 >
-                  Request Consultation
+                  Apply Now
                 </Link>
               </div>
             ))}
@@ -97,49 +97,50 @@ export default function Membership() {
         </div>
       </section>
 
-      {/* Lead Capture Form */}
-      <section id="consultation" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-[#0A0A0A] border-t border-white/5">
-        <div className="container mx-auto max-w-4xl">
-          <div className="glass-card p-6 sm:p-10 md:p-14 border border-[#C9A14A]/20 relative overflow-hidden text-center">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[80px]"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[80px]"></div>
+      {/* Premium Membership CTA */}
+      <section className="py-20 md:py-32 px-4 md:px-8 lg:px-12 bg-[#0A0A0A] border-t border-white/5 relative overflow-hidden">
+        {/* Decorative Background Effects */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none"></div>
+        
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="bg-black/60 backdrop-blur-xl p-10 md:p-16 lg:p-20 rounded-3xl border border-[#C9A14A]/30 shadow-[0_0_40px_rgba(201,161,74,0.2)] text-center transition-all duration-700 hover:border-[#C9A14A] hover:shadow-[0_0_60px_rgba(201,161,74,0.3)] hover:scale-[1.02] group">
             
-            <h2 className="text-3xl md:text-4xl font-serif text-white mb-4 relative z-10">Request Membership Consultation</h2>
-            <p className="text-white/60 mb-10 text-sm max-w-xl mx-auto relative z-10">
-              Please provide your details below and our membership team will contact you shortly to discuss your requirements.
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#C9A14A]/50"></div>
+              <p className="text-[#C9A14A] uppercase tracking-[0.3em] text-[10px] md:text-xs font-semibold">LIMITED MEMBERSHIP ACCESS</p>
+              <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#C9A14A]/50"></div>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 leading-tight tracking-wide">
+              Apply for <span className="text-[#C9A14A] font-cormorant italic normal-case">Membership</span>
+            </h2>
+            
+            <p className="text-white/70 mb-12 text-sm md:text-base max-w-2xl mx-auto leading-relaxed font-light">
+              Join an exclusive circle designed for families who value luxury experiences, elite networking, premium hospitality, and unforgettable social moments.
             </p>
 
-            <form className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-              <div className="space-y-2">
-                <label className="text-white/70 text-xs uppercase tracking-widest font-semibold ml-1">Full Name</label>
-                <input type="text" placeholder="Enter your full name" className="w-full bg-black/50 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-[#C9A14A]/50 transition-colors" />
-              </div>
-              <div className="space-y-2">
-                <label className="text-white/70 text-xs uppercase tracking-widest font-semibold ml-1">Mobile Number</label>
-                <input type="tel" placeholder="Enter your mobile number" className="w-full bg-black/50 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-[#C9A14A]/50 transition-colors" />
-              </div>
-              <div className="space-y-2 md:col-span-2">
-                <label className="text-white/70 text-xs uppercase tracking-widest font-semibold ml-1">Membership Interest</label>
-                <select defaultValue="" className="w-full bg-black/50 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-[#C9A14A]/50 transition-colors appearance-none">
-                  <option value="" disabled>Select Membership Tier</option>
-                  <option value="individual">Individual</option>
-                  <option value="couple">Couple</option>
-                  <option value="family">Family</option>
-                  <option value="corporate">Corporate</option>
-                </select>
-              </div>
-              <div className="md:col-span-2 mt-4 text-center">
-                <button type="submit" className="inline-flex items-center gap-3 px-10 py-4 bg-[#C9A14A] text-black font-semibold hover:bg-white transition-colors uppercase tracking-widest text-sm shadow-[0_0_20px_rgba(212,175,55,0.2)]">
-                  Submit Enquiry <ArrowRight className="w-5 h-5" />
-                </button>
-              </div>
-            </form>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link 
+                href="/apply" 
+                className="w-full sm:w-auto px-10 py-4 bg-[#C9A14A] text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-white transition-all duration-500 shadow-[0_0_20px_rgba(201,161,74,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+              >
+                APPLY NOW
+              </Link>
+              
+              <Link 
+                href="#privileges" 
+                className="w-full sm:w-auto px-10 py-4 border border-[#C9A14A] text-[#C9A14A] font-bold uppercase tracking-widest text-xs rounded-full hover:bg-[#C9A14A] hover:text-black transition-all duration-500"
+              >
+                VIEW MEMBERSHIP BENEFITS
+              </Link>
+            </div>
+            
           </div>
         </div>
       </section>
 
       {/* Privileges */}
-      <section className="py-14 md:py-24 px-4 md:px-8 bg-black border-t border-white/5">
+      <section id="privileges" className="py-14 md:py-24 px-4 md:px-8 bg-black border-t border-white/5">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">The Stellaar Privileges</h2>

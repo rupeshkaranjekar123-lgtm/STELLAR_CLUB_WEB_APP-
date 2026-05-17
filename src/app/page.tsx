@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LocationSection from '@/components/LocationSection';
 import { Star, Shield, Users, ArrowRight, ChevronDown, Check, Award, Camera, Dumbbell, Heart, MapPin, Quote, Music, Coffee, Droplets, Building2, ChefHat, Wine, Leaf, Headphones, ConciergeBell } from 'lucide-react';
-
+import PremiumAmenities from '@/components/PremiumAmenities';
 export default function Home() {
   return (
     <main className="min-h-screen bg-black overflow-x-hidden">
@@ -461,58 +461,7 @@ export default function Home() {
       <LocationSection />
 
       {/* ─── Premium Amenities Preview ─── */}
-      <section className="py-16 md:py-24 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#C9A14A]/5 rounded-full blur-[140px]"></div>
-        </div>
-
-        <div className="container mx-auto max-w-7xl px-5 md:px-12 relative z-10">
-          {/* Header */}
-          <div className="text-center mb-20">
-            <p className="text-[#C9A14A] tracking-[0.35em] uppercase text-xs font-bold mb-4">Discover More</p>
-            <h2 className="text-3xl md:text-4xl font-serif text-white">Premium Amenities</h2>
-          </div>
-
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-            {[
-              { title: 'Swimming Pool', desc: 'Olympic-sized luxury pool for relaxation and fitness.', image: '/images/pool.jpg', link: '/amenities', Icon: Droplets },
-              { title: 'Fitness Gym', desc: 'State-of-the-art equipment and personal training.', image: '/images/gallery-3.jpg', link: '/amenities', Icon: Dumbbell },
-              { title: 'Restaurant', desc: 'Fine dining culinary experiences with global cuisines.', image: '/images/dining.jpg', link: '/restaurant', Icon: Coffee },
-              { title: 'Banquet Hall', desc: 'Elegant spaces for weddings and corporate events.', image: '/images/gallery-2.jpg', link: '/banquet', Icon: Award },
-              { title: 'Family Recreation', desc: 'Dedicated zones for children and family bonding.', image: '/images/gallery-4.jpg', link: '/amenities', Icon: Users },
-            ].map(({ title, desc, image, link, Icon }, i) => (
-              <Link
-                href={link} key={i}
-                className="group relative block rounded-[20px] overflow-hidden border border-white/10 hover:border-[#C9A14A]/50 transition-all duration-700 hover:-translate-y-2 shadow-[0_8px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_8px_60px_rgba(201,161,74,0.18)]"
-              >
-                {/* Background */}
-                <div className="absolute inset-0">
-                  <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30 group-hover:from-black/90 transition-all duration-700"></div>
-                </div>
-
-                {/* Content */}
-                <div className="relative z-10 flex flex-col items-center justify-end min-h-[380px] p-9 text-center">
-                  {/* Glowing circular icon */}
-                  <div className="mb-6 w-[68px] h-[68px] rounded-full bg-black/50 backdrop-blur-md border border-[#C9A14A]/40 flex items-center justify-center shadow-[0_0_22px_rgba(201,161,74,0.35)] group-hover:shadow-[0_0_40px_rgba(201,161,74,0.6)] group-hover:border-[#C9A14A]/70 group-hover:scale-110 transition-all duration-500">
-                    <Icon className="w-7 h-7 text-[#C9A14A] drop-shadow-[0_0_6px_rgba(201,161,74,0.7)]" />
-                  </div>
-
-                  <h3 className="text-2xl font-serif text-white mb-3 group-hover:text-[#C9A14A] transition-colors duration-500">{title}</h3>
-                  <p className="text-white/55 text-sm leading-relaxed mb-7 font-light">{desc}</p>
-
-                  {/* Gold outlined button */}
-                  <span className="inline-flex items-center gap-2 px-5 md:px-12 py-2.5 border border-[#C9A14A] text-[#C9A14A] text-[11px] uppercase tracking-widest rounded-full font-semibold group-hover:bg-[#C9A14A] group-hover:text-black transition-all duration-500 shadow-[0_0_12px_rgba(201,161,74,0.2)] group-hover:shadow-[0_0_24px_rgba(201,161,74,0.45)]">
-                    Explore More
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PremiumAmenities />
 
       {/* ─── Banquet & Restaurant Promotions ─── */}
       <section className="py-24 relative bg-[#050505] overflow-hidden border-y border-[#C9A14A]/10">
