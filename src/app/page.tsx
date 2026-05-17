@@ -758,6 +758,9 @@ export default function Home() {
                     >
                       Reforms Club Amravati
                     </h3>
+                     <p className="text-white/50 text-xs sm:text-sm mt-2 max-w-md leading-relaxed">
+                    
+                    </p>
                   </div>
                 </div>
 
