@@ -18,9 +18,9 @@ const YoutubeIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A0A0A] border-t border-[#C9A14A]/20 pt-20 pb-10 text-white/80">
+    <footer className="bg-[#0A0A0A] border-t border-[#C9A14A]/20 pt-14 md:pt-20 pb-8 md:pb-10 text-white/80">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
           <div className="space-y-6">
             <Link href="/" className="inline-block mb-4">
               <img 

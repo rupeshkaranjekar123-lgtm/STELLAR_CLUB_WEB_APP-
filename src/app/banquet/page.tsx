@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Banquet() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
@@ -41,7 +41,7 @@ export default function Banquet() {
       </section>
 
       {/* Event Types */}
-      <section className="py-24 px-6 bg-[#0A0A0A]">
+      <section className="py-14 md:py-24 px-4 md:px-8 bg-[#0A0A0A]">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <p className="text-[#C9A14A] tracking-[0.2em] uppercase text-xs font-bold mb-4">Curated Experiences</p>
@@ -55,7 +55,7 @@ export default function Banquet() {
               { title: 'Engagements', img: '/images/gallery-4.jpg', desc: 'Intimate and luxurious settings for your special day.' },
               { title: 'Birthdays', img: '/images/gallery-2.jpg', desc: 'Joyous celebrations tailored for all ages.' }
             ].map((event, i) => (
-              <div key={i} className="group relative h-[400px] overflow-hidden rounded-lg border border-white/10 hover:border-[#C9A14A]/50 transition-all duration-500">
+              <div key={i} className="group relative h-[260px] sm:h-[340px] md:h-[400px] overflow-hidden rounded-lg border border-white/10 hover:border-[#C9A14A]/50 transition-all duration-500">
                 <img src={event.img} alt={event.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-8 text-center translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -69,10 +69,10 @@ export default function Banquet() {
       </section>
 
       {/* Facilities */}
-      <section className="py-24 px-6 bg-black relative overflow-hidden">
+      <section className="py-14 md:py-24 px-4 md:px-8 bg-black relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-center">
             {[
               { icon: <Users className="w-8 h-8 text-[#C9A14A] mb-4 mx-auto" />, title: 'Capacity', desc: 'Up to 500 Guests' },
               { icon: <Car className="w-8 h-8 text-[#C9A14A] mb-4 mx-auto" />, title: 'Parking', desc: 'Valet Service' },
@@ -90,9 +90,9 @@ export default function Banquet() {
       </section>
 
       {/* Quote Form */}
-      <section id="quote" className="py-24 px-6 bg-[#0A0A0A] border-t border-white/5">
+      <section id="quote" className="py-14 md:py-24 px-4 md:px-8 bg-[#0A0A0A] border-t border-white/5">
         <div className="container mx-auto max-w-4xl">
-          <div className="glass-card p-10 md:p-14 border border-[#C9A14A]/20 relative overflow-hidden text-center">
+          <div className="glass-card p-6 sm:p-10 md:p-14 border border-[#C9A14A]/20 relative overflow-hidden text-center">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[80px]"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[80px]"></div>
             

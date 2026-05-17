@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Restaurant() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
@@ -43,7 +43,7 @@ export default function Restaurant() {
       </section>
 
       {/* Experience Highlights */}
-      <section className="py-24 px-6 bg-[#0A0A0A]">
+      <section className="py-14 md:py-24 px-4 md:px-8 bg-[#0A0A0A]">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div className="group">
@@ -80,7 +80,7 @@ export default function Restaurant() {
             { img: '/images/gallery-4.jpg', title: 'Family Gatherings' },
             { img: '/images/pool.jpg', title: 'Poolside Drinks' }
           ].map((item, i) => (
-            <div key={i} className="relative overflow-hidden group h-[300px] md:h-full">
+            <div key={i} className="relative overflow-hidden group h-[200px] sm:h-[260px] md:h-full">
               <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-colors duration-700 flex items-center justify-center">
                 <h3 className="text-white font-serif text-2xl tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">{item.title}</h3>
@@ -91,9 +91,9 @@ export default function Restaurant() {
       </section>
 
       {/* Reservation Form */}
-      <section id="reservation" className="py-24 px-6 bg-[#0A0A0A] border-t border-white/5">
+      <section id="reservation" className="py-14 md:py-24 px-4 md:px-8 bg-[#0A0A0A] border-t border-white/5">
         <div className="container mx-auto max-w-4xl">
-          <div className="glass-card p-10 md:p-14 border border-[#C9A14A]/20 relative overflow-hidden text-center">
+          <div className="glass-card p-6 sm:p-10 md:p-14 border border-[#C9A14A]/20 relative overflow-hidden text-center">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[80px]"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[80px]"></div>
             

@@ -2,11 +2,11 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LocationSection from '@/components/LocationSection';
-import { Star, Shield, Users, ArrowRight, ChevronDown, Check, Award, Camera, Dumbbell, Heart, MapPin, Quote, Music, Coffee, Droplets } from 'lucide-react';
+import { Star, Shield, Users, ArrowRight, ChevronDown, Check, Award, Camera, Dumbbell, Heart, MapPin, Quote, Music, Coffee, Droplets, Building2, ChefHat, Wine, Leaf, Headphones, ConciergeBell } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}
@@ -18,14 +18,14 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover opacity-60 scale-105"
+            className="w-full h-full object-cover opacity-90 scale-105"
           >
-            <source src="/videos/club-bg.mp4" type="video/mp4" />
+            <source src="https://discoverylandco.com/images/homepage/hero-home.mp4" type="video/mp4" />
           </video>
           {/* Overlays for depth and cinematic lighting */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/30 to-black"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,161,74,0.15)_0%,transparent_70%)]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/10 to-black/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,161,74,0.08)_0%,transparent_70%)]"></div>
         </div>
 
         {/* Ambient Glowing Orbs */}
@@ -50,20 +50,20 @@ export default function Home() {
           </div>
 
           {/* Headline */}
-          <h1 className="relative font-serif text-white mb-8 leading-[1.15] flex flex-col items-center fade-in delay-100 text-center">
-            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-light tracking-wide drop-shadow-2xl opacity-90">
+          <h1 className="relative mb-8 leading-[1.2] flex flex-col items-center fade-in delay-100 text-center">
+            <span className="font-cormorant italic text-white/90 text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-light tracking-[0.1em] drop-shadow-2xl">
               Nagpur&apos;s Most Exclusive
             </span>
-            <span className="text-shimmer text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] font-serif my-2 drop-shadow-[0_0_30px_rgba(201,161,74,0.3)]">
+            <span className="font-cinzel-decorative text-shimmer text-3xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-bold my-3 drop-shadow-[0_0_40px_rgba(201,161,74,0.5)] leading-tight">
               Family Club
             </span>
-            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] font-light tracking-widest drop-shadow-2xl uppercase opacity-90">
+            <span className="font-cinzel text-white/80 text-base sm:text-xl md:text-2xl lg:text-3xl font-normal tracking-[0.5em] drop-shadow-2xl uppercase mt-1">
               Experience
             </span>
           </h1>
 
           {/* Supporting Text */}
-          <p className="text-white/70 text-sm sm:text-base md:text-lg mb-12 max-w-3xl mx-auto font-light tracking-[0.15em] leading-relaxed px-4 fade-in delay-200">
+          <p className="font-cormorant italic text-white/80 text-base sm:text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light tracking-[0.12em] leading-relaxed px-4 fade-in delay-200">
             Where luxury, lifestyle, networking, and unforgettable family moments come together.
           </p>
 
@@ -75,12 +75,6 @@ export default function Home() {
             >
               Apply for Membership <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
-              href="/contact"
-              className="group px-8 py-4 border border-[#C9A14A]/30 text-[#C9A14A] hover:border-[#C9A14A] hover:bg-[#C9A14A]/5 transition-all duration-500 uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold w-full sm:w-auto text-center glass rounded-sm hover:scale-105"
-            >
-              Schedule a Club Visit
-            </Link>
             <a
               href="https://wa.me/917888005995"
               target="_blank"
@@ -91,47 +85,7 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Stats & Affiliation Section */}
-          <div className="mt-16 w-full max-w-5xl px-5 md:px-12 fade-in delay-500 flex flex-col items-center">
 
-            {/* Affiliation Banner */}
-            <Link
-              href="https://www.reformsclub.com/"
-              target="_blank"
-              className="group relative flex flex-col md:flex-row items-center justify-between px-5 md:px-12 py-4 md:px-10 md:py-6 rounded-3xl md:rounded-full border border-[#C9A14A]/30 bg-black/40 backdrop-blur-md hover:scale-[1.02] hover:border-[#C9A14A]/70 hover:shadow-[0_0_30px_rgba(212,175,55,0.25)] transition-all duration-300 w-full max-w-4xl mx-auto"
-            >
-              {/* Left/Center: Logo & Text */}
-              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-                {/* Logo */}
-                <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-white p-1 flex items-center justify-center border border-[#C9A14A]/50 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
-                  <img
-                    src="/images/reforms-club-logo.png"
-                    alt="Reforms Club Logo"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-
-                {/* Divider Line (Desktop only) */}
-                <div className="hidden md:block w-px h-12 bg-gradient-to-b from-transparent via-[#C9A14A]/50 to-transparent"></div>
-
-                {/* Text */}
-                <div className="text-center md:text-left">
-                  <p className="text-gray-400 uppercase tracking-widest text-xs md:text-sm font-semibold mb-1">
-                    Affiliated With
-                  </p>
-                  <h3 className="text-white font-serif text-lg md:text-2xl tracking-wide group-hover:text-[#C9A14A] transition-colors duration-300">
-                    Reforms Club Amravati
-                  </h3>
-                </div>
-              </div>
-
-              {/* Right: Arrow */}
-              <div className="hidden md:flex shrink-0 w-12 h-12 rounded-full border border-[#C9A14A]/30 items-center justify-center group-hover:bg-[#C9A14A] group-hover:border-[#C9A14A] transition-all duration-300">
-                <ArrowRight className="w-5 h-5 text-[#C9A14A] group-hover:text-black transition-colors" />
-              </div>
-            </Link>
-
-          </div>
         </div>
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/25 select-none">
@@ -164,7 +118,7 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl px-5 md:px-12 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
             {[
-              { label: 'Trusted by 500+ Families', icon: Users },
+              { label: 'Trusted by 100+ Families', icon: Users },
               { label: 'Prime Ajni Location', icon: MapPin },
               { label: 'Premium Amenities', icon: Star },
             ].map((stat, i) => (
@@ -179,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* Editorial About Preview */}
-      <section className="py-20 md:py-20 md:py-16 md:py-20 px-5 md:px-12 relative bg-gradient-to-b from-black to-[#0A0A0A]">
+      <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-12 relative bg-gradient-to-b from-black to-[#0A0A0A]">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-5 space-y-8 relative z-10">
@@ -216,23 +170,23 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-7 relative h-[700px] w-full mt-10 lg:mt-0">
-              <div className="absolute inset-0 bg-[#C9A14A]/5 translate-x-4 translate-y-4 border border-[#C9A14A]/20 z-0"></div>
+            <div className="lg:col-span-7 relative h-[360px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-full mt-10 lg:mt-0">
+              <div className="absolute inset-0 bg-[#C9A14A]/5 translate-x-3 translate-y-3 border border-[#C9A14A]/20 z-0"></div>
               <img
                 src="/images/exterior.jpg"
                 alt="Luxury Lifestyle"
                 className="relative z-10 w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-1000 shadow-2xl"
               />
-              {/* Floating Stat Card — Bottom Left */}
-              <div className="absolute -bottom-8 -left-8 md:bottom-12 md:-left-12 bg-black/80 backdrop-blur-md border border-[#C9A14A]/30 p-8 shadow-2xl z-20 max-w-[250px] fade-in">
-                <Award className="w-8 h-8 text-[#C9A14A] mb-4" />
-                <h4 className="text-3xl font-serif text-white mb-2">100+</h4>
-                <p className="text-white/60 text-xs uppercase tracking-widest leading-relaxed">Join the inner circle of distinguished families.</p>
+              {/* Floating Stat Card — Bottom Left (desktop only to avoid mobile overflow) */}
+              <div className="hidden sm:block absolute bottom-6 -left-4 md:-left-10 bg-black/80 backdrop-blur-md border border-[#C9A14A]/30 p-5 md:p-8 shadow-2xl z-20 max-w-[200px] md:max-w-[250px] fade-in">
+                <Award className="w-6 h-6 md:w-8 md:h-8 text-[#C9A14A] mb-3 md:mb-4" />
+                <h4 className="text-2xl md:text-3xl font-serif text-white mb-1 md:mb-2">100+</h4>
+                <p className="text-white/60 text-[10px] md:text-xs uppercase tracking-widest leading-relaxed">Join the inner circle of distinguished families.</p>
               </div>
               {/* Floating Est. Card — Top Right */}
-              <div className="absolute -top-5 -right-5 md:top-8 md:-right-8 bg-black/90 backdrop-blur-md border border-[#C9A14A]/20 p-5 shadow-2xl z-20 fade-in float-slow">
+              <div className="absolute top-3 right-3 md:top-8 md:-right-8 bg-black/90 backdrop-blur-md border border-[#C9A14A]/20 p-4 md:p-5 shadow-2xl z-20 fade-in float-slow">
                 <p className="text-[#C9A14A] text-[9px] uppercase tracking-[0.4em] mb-1">Established</p>
-                <div className="text-3xl font-serif text-white leading-none">2024</div>
+                <div className="text-2xl md:text-3xl font-serif text-white leading-none"></div>
                 <p className="text-white/30 text-[9px] uppercase tracking-widest mt-1">Nagpur, India</p>
               </div>
             </div>
@@ -251,7 +205,7 @@ export default function Home() {
 
         {/* Scrolling wrapper */}
         <div className="w-full overflow-hidden flex">
-          <div className="animate-marquee flex gap-6 pr-6 w-max [animation-duration:40s] hover:[animation-play-state:paused]">
+          <div className="animate-marquee flex gap-6 pr-6 w-max [animation-duration:80s] hover:[animation-play-state:paused]">
             {[
               '/images/gallery-1.jpg',
               '/images/gallery-2.jpg',
@@ -281,7 +235,7 @@ export default function Home() {
                   alt={`Stellaar Life ${i}`}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover/img:bg-black/10 transition-colors duration-500 flex items-center justify-center">
+                <div className="absolute inset-0 bg-transparent group-hover/img:bg-black/50 transition-colors duration-500 flex items-center justify-center">
                   <div className="opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 flex flex-col items-center">
                     <Camera className="w-8 h-8 text-[#C9A14A] mb-2" />
                     <span className="text-white text-[10px] tracking-[0.3em] uppercase font-bold">View Gallery</span>
@@ -295,7 +249,7 @@ export default function Home() {
       </section>
 
       {/* Amenities Highlight - Cinematic Section */}
-      <section className="py-20 md:py-20 md:py-16 md:py-20 relative overflow-hidden flex items-center justify-center min-h-[80vh]">
+      <section className="py-16 md:py-24 relative overflow-hidden flex items-center justify-center min-h-[70vh] md:min-h-[80vh]">
         <div className="absolute inset-0">
           <img
             src="/images/amenities-bg.png"
@@ -323,7 +277,7 @@ export default function Home() {
         </div>
       </section>
       {/* Premium Membership Cards */}
-      <section className="py-20 md:py-20 md:py-16 md:py-20 px-5 md:px-12 bg-[#0A0A0A] relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-28 px-4 md:px-8 lg:px-12 bg-[#0A0A0A] relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#C9A14A]/5 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -339,12 +293,11 @@ export default function Home() {
             <p className="text-white/35 text-xs uppercase tracking-[0.3em] mt-4">Limited to 100 distinguished families</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
             {[
               { name: 'Individual', features: ['Solo Access', '15% Dining Discount', 'Standard Event Access'], color: 'border-white/10 hover:border-white/30', gradient: 'from-white/5' },
               { name: 'Couple', features: ['Spouse Access', '20% Dining Discount', 'Standard Event Access'], color: 'border-white/10 hover:border-white/30', gradient: 'from-white/5' },
               { name: 'Family', features: ['Full Family Access', '30% Dining Discount', 'VIP Event Access', 'Valet Parking'], color: 'border-[#C9A14A] shadow-[0_0_30px_rgba(212,175,55,0.15)] transform scale-105 z-10', gradient: 'from-[#C9A14A]/10', isPopular: true },
-              { name: 'Corporate', features: ['Executive Access', 'Premium Dining Discount', 'Priority Event Access', 'Corporate Passes'], color: 'border-white/10 hover:border-white/30', gradient: 'from-white/5' }
             ].map((plan, i) => (
               <div key={i} className={`relative bg-gradient-to-b ${plan.gradient} to-transparent backdrop-blur-xl p-10 flex flex-col items-center text-center transition-all duration-500 border hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] ${plan.color} ${plan.isPopular ? 'py-14 bg-black/60' : 'bg-black/40'}`}>
                 {plan.isPopular && (
@@ -413,7 +366,7 @@ export default function Home() {
       </section>
 
       {/* ─── Stellaar Circle CTA ─── */}
-      <section className="relative py-20 md:py-20 md:py-16 md:py-20 overflow-hidden bg-black">
+      <section className="relative py-16 md:py-24 overflow-hidden bg-black">
         {/* Cinematic background */}
         <div className="absolute inset-0">
           <img
@@ -508,7 +461,7 @@ export default function Home() {
       <LocationSection />
 
       {/* ─── Premium Amenities Preview ─── */}
-      <section className="py-20 md:py-16 md:py-20 bg-black relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-black relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#C9A14A]/5 rounded-full blur-[140px]"></div>
         </div>
@@ -562,39 +515,130 @@ export default function Home() {
       </section>
 
       {/* ─── Banquet & Restaurant Promotions ─── */}
-      <section className="py-0 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* Banquet */}
-          <div className="relative h-[600px] overflow-hidden group">
-            <img src="/images/gallery-5.jpg" alt="Banquet Events" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-500"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
-              <Award className="w-12 h-12 text-[#C9A14A] mb-6 drop-shadow-lg" />
-              <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Host Grand Events</h2>
-              <p className="text-white/80 max-w-md mx-auto mb-8 font-light text-lg">Celebrate your weddings, birthdays, and corporate events in our premium banquet halls.</p>
-              <Link href="/banquet" className="px-8 py-3 bg-[#C9A14A] text-black font-bold uppercase tracking-widest text-xs hover:bg-white transition-colors duration-300">
-                Get Event Quote
-              </Link>
+      <section className="py-24 relative bg-[#050505] overflow-hidden border-y border-[#C9A14A]/10">
+        {/* Background Ambient Effects */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#C9A14A]/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div className="container mx-auto px-5 md:px-12 max-w-[1400px] relative z-10">
+
+          {/* Header */}
+          <div className="text-center mb-16 flex flex-col items-center">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#C9A14A]/50"></div>
+              <p className="text-[#C9A14A] uppercase tracking-[0.3em] text-[10px] font-semibold">EXCLUSIVE EXPERIENCES</p>
+              <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#C9A14A]/50"></div>
             </div>
+            <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif text-white mb-6 leading-tight">
+              Extraordinary Moments. <span className="text-[#C9A14A]">Perfectly Crafted.</span>
+            </h2>
+            <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto font-cormorant italic tracking-wide">
+              From grand celebrations to intimate dinners, we create unforgettable experiences.
+            </p>
           </div>
-          {/* Restaurant */}
-          <div className="relative h-[600px] overflow-hidden group">
-            <img src="/images/dining.jpg" alt="Fine Dining" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-500"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
-              <Coffee className="w-12 h-12 text-[#C9A14A] mb-6 drop-shadow-lg" />
-              <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Fine Dining</h2>
-              <p className="text-white/80 max-w-md mx-auto mb-8 font-light text-lg">Indulge in exquisite culinary experiences with world-class chefs and perfect ambience.</p>
-              <Link href="/restaurant" className="px-8 py-3 bg-[#C9A14A] text-black font-bold uppercase tracking-widest text-xs hover:bg-white transition-colors duration-300">
-                Reserve Table
-              </Link>
+
+          {/* Split Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+
+            {/* Left Card: Banquet */}
+            <div className="group relative h-[650px] md:h-[700px] rounded-3xl overflow-hidden border border-[#C9A14A]/30 bg-black/70 transition-all duration-700 hover:border-[#C9A14A] hover:shadow-[0_0_40px_rgba(201,161,74,0.15)] hover:scale-[1.02]">
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img src="/images/gallery-5.jpg" alt="Grand Events" className="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/90"></div>
+                <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px] transition-all duration-700 group-hover:backdrop-blur-0"></div>
+              </div>
+
+              {/* Content */}
+              <div className="relative h-full flex flex-col justify-between p-6 md:p-10 z-10">
+                {/* Top Content */}
+                <div className="flex flex-col items-center text-center mt-6 md:mt-10">
+                  <div className="w-16 h-16 rounded-full border border-[#C9A14A]/50 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(201,161,74,0.2)] group-hover:shadow-[0_0_30px_rgba(201,161,74,0.4)] transition-all duration-500">
+                    <Award className="w-8 h-8 text-[#C9A14A]" />
+                  </div>
+                  <h3 className="font-cormorant italic normal-case text-[#C9A14A] text-2xl md:text-3xl mb-4 tracking-wide">Unforgettable Celebrations</h3>
+                  <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl text-white tracking-widest leading-snug mb-6">HOST GRAND<br />EVENTS</h2>
+                  <p className="text-white/70 font-light max-w-sm mx-auto leading-relaxed text-sm md:text-base">
+                    Celebrate life's special moments in our premium banquet halls, designed for memorable experiences.
+                  </p>
+
+                  <Link href="/banquet" className="mt-8 px-8 py-3.5 border border-[#C9A14A] text-[#C9A14A] bg-black/40 uppercase tracking-[0.2em] text-[10px] font-semibold hover:bg-[#C9A14A] hover:text-black transition-all duration-500 flex items-center gap-2 group/btn rounded-sm">
+                    GET EVENT QUOTE <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+
+                {/* Bottom Strip */}
+                <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 bg-black/60 border border-white/10 rounded-2xl p-4 md:p-5 mt-auto w-full backdrop-blur-md">
+                  <div className="flex items-center gap-3">
+                    <Building2 className="w-4 h-4 text-[#C9A14A]" />
+                    <span className="text-[10px] text-white/80 uppercase tracking-widest">Spacious Venues</span>
+                  </div>
+                  <div className="hidden sm:block w-px h-6 bg-white/10"></div>
+                  <div className="flex items-center gap-3">
+                    <Camera className="w-4 h-4 text-[#C9A14A]" />
+                    <span className="text-[10px] text-white/80 uppercase tracking-widest">Custom Décor</span>
+                  </div>
+                  <div className="hidden sm:block w-px h-6 bg-white/10"></div>
+                  <div className="flex items-center gap-3">
+                    <Headphones className="w-4 h-4 text-[#C9A14A]" />
+                    <span className="text-[10px] text-white/80 uppercase tracking-widest">Full Event Support</span>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* Right Card: Restaurant */}
+            <div className="group relative h-[650px] md:h-[700px] rounded-3xl overflow-hidden border border-[#C9A14A]/30 bg-black/70 transition-all duration-700 hover:border-[#C9A14A] hover:shadow-[0_0_40px_rgba(201,161,74,0.15)] hover:scale-[1.02]">
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img src="/images/dining.jpg" alt="Fine Dining" className="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/90"></div>
+                <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px] transition-all duration-700 group-hover:backdrop-blur-0"></div>
+              </div>
+
+              {/* Content */}
+              <div className="relative h-full flex flex-col justify-between p-6 md:p-10 z-10">
+                {/* Top Content */}
+                <div className="flex flex-col items-center text-center mt-6 md:mt-10">
+                  <div className="w-16 h-16 rounded-full border border-[#C9A14A]/50 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(201,161,74,0.2)] group-hover:shadow-[0_0_30px_rgba(201,161,74,0.4)] transition-all duration-500">
+                    <ConciergeBell className="w-8 h-8 text-[#C9A14A]" />
+                  </div>
+                  <h3 className="font-cormorant italic normal-case text-[#C9A14A] text-2xl md:text-3xl mb-4 tracking-wide">Culinary Excellence</h3>
+                  <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl text-white tracking-widest leading-snug mb-6">FINE DINING</h2>
+                  <p className="text-white/70 font-light max-w-sm mx-auto leading-relaxed text-sm md:text-base">
+                    Indulge in exquisite culinary experiences curated by world-class chefs in the perfect ambiance.
+                  </p>
+
+                  <Link href="/restaurant" className="mt-8 px-8 py-3.5 border border-[#C9A14A] text-[#C9A14A] bg-black/40 uppercase tracking-[0.2em] text-[10px] font-semibold hover:bg-[#C9A14A] hover:text-black transition-all duration-500 flex items-center gap-2 group/btn rounded-sm">
+                    RESERVE TABLE <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+
+                {/* Bottom Strip */}
+                <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 bg-black/60 border border-white/10 rounded-2xl p-4 md:p-5 mt-auto w-full backdrop-blur-md">
+                  <div className="flex items-center gap-3">
+                    <ChefHat className="w-4 h-4 text-[#C9A14A]" />
+                    <span className="text-[10px] text-white/80 uppercase tracking-widest">World-Class Chefs</span>
+                  </div>
+                  <div className="hidden sm:block w-px h-6 bg-white/10"></div>
+                  <div className="flex items-center gap-3">
+                    <Wine className="w-4 h-4 text-[#C9A14A]" />
+                    <span className="text-[10px] text-white/80 uppercase tracking-widest">Premium Beverages</span>
+                  </div>
+                  <div className="hidden sm:block w-px h-6 bg-white/10"></div>
+                  <div className="flex items-center gap-3">
+                    <Leaf className="w-4 h-4 text-[#C9A14A]" />
+                    <span className="text-[10px] text-white/80 uppercase tracking-widest">Finest Ingredients</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* ─── Testimonials ─── */}
-      <section className="py-20 md:py-16 md:py-20 bg-[#0A0A0A] relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-[#0A0A0A] relative overflow-hidden">
         <div className="container mx-auto max-w-6xl px-5 md:px-12 relative z-10">
           <div className="text-center mb-16">
             <Quote className="w-10 h-10 text-[#C9A14A]/30 mx-auto mb-4" />
@@ -622,7 +666,7 @@ export default function Home() {
       </section>
 
       {/* ─── Premium CTA Banner ─── */}
-      <section className="relative py-20 md:py-16 md:py-20 bg-[#111111] overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-[#111111] overflow-hidden">
         {/* Ambient background */}
         <div className="absolute inset-0">
           <img src="/images/dining.png" alt="Stellaar Lifestyle" className="w-full h-full object-cover opacity-15" />
@@ -684,8 +728,146 @@ export default function Home() {
             </div>
 
           </div>
+
+          {/* Affiliation Banner — Full Width */}
+          <div className="mt-16 w-full flex justify-center px-4 sm:px-6 md:px-10 lg:px-16 fade-in delay-500">
+            <Link
+              href="https://www.reformsclub.com/"
+              target="_blank"
+              className="
+                            group relative overflow-hidden
+                            w-full max-w-4xl
+                            rounded-[28px]
+                            border border-[#C9A14A]/20
+                            bg-gradient-to-br from-black/80 via-black/70 to-[#1a1205]/80
+                            backdrop-blur-2xl 
+                            transition-all duration-700
+                            hover:border-[#C9A14A]/60
+                            hover:shadow-[0_0_60px_rgba(201,161,74,0.25)]
+                            hover:-translate-y-1
+                          "
+            >
+              {/* Glow Effect */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(circle_at_top,rgba(201,161,74,0.15),transparent_60%)]" />
+
+              {/* Gold Border Shine */}
+              <div className="absolute inset-0 rounded-[28px] border border-transparent group-hover:border-[#C9A14A]/40 transition-all duration-700" />
+
+              <div className="relative z-10 flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-8 px-6 sm:px-8 md:px-10 py-7 md:py-8">
+
+                {/* Left Section */}
+                <div className="flex items-center gap-5 w-full md:w-auto">
+
+                  {/* Logo */}
+                  <div
+                    className="
+                            relative shrink-0
+                            w-16 h-16 sm:w-20 sm:h-20
+                            rounded-full
+                            bg-white
+                            p-2
+                            border border-[#C9A14A]/40
+                            shadow-[0_0_30px_rgba(255,255,255,0.08)]
+                            group-hover:scale-105
+                            transition-transform duration-500
+                          "
+                  >
+                    <div className="absolute inset-0 rounded-full bg-[#C9A14A]/10 blur-xl opacity-60" />
+
+                    <img
+                      src="/images/reforms-club-logo.png"
+                      alt="Reforms Club Logo"
+                      className="relative z-10 w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Text */}
+                  <div className="min-w-0">
+                    <p
+                      className="
+                                text-[#C9A14A]
+                                uppercase
+                                tracking-[0.35em]
+                                text-[10px] sm:text-xs
+                                font-semibold
+                                mb-2
+                              "
+                    >
+                      Affiliated With
+                    </p>
+
+                    <h3
+                      className="
+                                  text-white
+                                  font-cinzel
+                                  text-lg sm:text-xl md:text-2xl
+                                  tracking-[0.12em]
+                                  leading-tight
+                                  group-hover:text-[#C9A14A]
+                                  transition-colors duration-500
+                                "
+                    >
+                      Reforms Club Amravati
+                    </h3>
+
+                    <p className="text-white/50 text-xs sm:text-sm mt-2 max-w-md leading-relaxed">
+                      Partnered with one of Maharashtra’s prestigious lifestyle and social clubs.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Divider */}
+                <div className="hidden md:block w-px self-stretch bg-gradient-to-b from-transparent via-[#C9A14A]/40 to-transparent" />
+
+                {/* Right CTA */}
+                <div className="w-full md:w-auto flex justify-end">
+                  <div
+                    className="
+                                  flex items-center gap-4
+                                  px-5 sm:px-6 py-3
+                                  rounded-full
+                                  border border-[#C9A14A]/30
+                                  bg-[#C9A14A]/5
+                                  group-hover:bg-[#C9A14A]
+                                  transition-all duration-500
+                                "
+                  >
+                    <span
+                      className="
+                              text-[#C9A14A]
+                              text-sm sm:text-base
+                              font-medium
+                              tracking-wide
+                              group-hover:text-black
+                              transition-colors duration-500
+                            "
+                    >
+                      Explore Club
+                    </span>
+
+                    <div
+                      className="
+              w-9 h-9 rounded-full
+              flex items-center justify-center
+              bg-[#C9A14A]
+              text-black
+              group-hover:bg-black
+              group-hover:text-[#C9A14A]
+              transition-all duration-500
+            "
+                    >
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+
         </div>
       </section>
+
       <Footer />
     </main>
   );

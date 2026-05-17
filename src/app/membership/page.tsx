@@ -33,11 +33,11 @@ export default function Membership() {
   ];
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
-      <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full min-h-[50vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <video 
             src="/videos/video-5.mp4" 
@@ -56,7 +56,7 @@ export default function Membership() {
       </section>
 
       {/* Pricing */}
-      <section className="py-24 px-6 bg-[#0A0A0A]">
+      <section className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-[#0A0A0A]">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <Shield className="w-10 h-10 text-[#C9A14A] mx-auto mb-6" />
@@ -98,9 +98,9 @@ export default function Membership() {
       </section>
 
       {/* Lead Capture Form */}
-      <section id="consultation" className="py-24 px-6 bg-[#0A0A0A] border-t border-white/5">
+      <section id="consultation" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-[#0A0A0A] border-t border-white/5">
         <div className="container mx-auto max-w-4xl">
-          <div className="glass-card p-10 md:p-14 border border-[#C9A14A]/20 relative overflow-hidden text-center">
+          <div className="glass-card p-6 sm:p-10 md:p-14 border border-[#C9A14A]/20 relative overflow-hidden text-center">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[80px]"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[80px]"></div>
             
@@ -139,7 +139,7 @@ export default function Membership() {
       </section>
 
       {/* Privileges */}
-      <section className="py-24 px-6 bg-black border-t border-white/5">
+      <section className="py-14 md:py-24 px-4 md:px-8 bg-black border-t border-white/5">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">The Stellaar Privileges</h2>
@@ -175,7 +175,7 @@ export default function Membership() {
       </section>
 
       {/* Application Process */}
-      <section className="py-24 px-6 bg-[#0A0A0A] border-t border-white/5">
+      <section className="py-14 md:py-24 px-4 md:px-8 bg-[#0A0A0A] border-t border-white/5">
         <div className="container mx-auto max-w-5xl">
           <div className="glass-card p-12 text-center border border-[#C9A14A]/20 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A14A]/5 rounded-full blur-[80px]"></div>

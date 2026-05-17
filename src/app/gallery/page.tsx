@@ -38,11 +38,11 @@ export default function Gallery() {
   const filteredItems = activeCategory === 'All' ? mediaItems : mediaItems.filter(item => item.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black overflow-x-hidden">
       <Navbar />
 
-      <section className="pt-40 pb-10 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-serif text-white mb-6">Gallery</h1>
+      <section className="pt-28 md:pt-36 lg:pt-40 pb-10 px-4 md:px-8 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-5">Gallery</h1>
         <p className="text-[#C9A14A] tracking-[0.2em] uppercase text-xs mb-12">A Glimpse of The Extraordinary</p>
 
         {/* Informative Intro Section */}
@@ -129,7 +129,7 @@ export default function Gallery() {
             <X className="w-6 h-6" />
           </button>
           
-          <div className="max-w-7xl w-full h-full flex flex-col md:flex-row items-center justify-center relative gap-8 py-20 px-4 md:px-12">
+          <div className="max-w-7xl w-full h-full flex flex-col md:flex-row items-center justify-center relative gap-6 md:gap-8 py-16 px-4 md:px-12">
             {/* Media Container */}
             <div className="w-full md:w-2/3 max-h-[80vh] flex items-center justify-center">
               {selectedMedia.type === 'image' ? (

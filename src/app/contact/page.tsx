@@ -8,7 +8,7 @@ import {
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-black relative overflow-hidden font-sans">
+    <main className="min-h-screen bg-black relative overflow-x-hidden font-sans">
       {/* Background Effects */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-[#C9A14A]/10 to-transparent blur-3xl"></div>
@@ -18,11 +18,11 @@ export default function Contact() {
 
       <Navbar />
 
-      <section className="pt-40 pb-24 px-6 relative z-10">
+      <section className="pt-28 md:pt-36 lg:pt-40 pb-16 md:pb-24 px-4 md:px-8 lg:px-12 relative z-10">
         <div className="container mx-auto max-w-7xl">
           {/* Header Section */}
           <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-6xl font-serif text-white tracking-[0.1em] mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white tracking-[0.1em] mb-6">
               CONTACT US
             </h1>
             <div className="flex items-center justify-center gap-4 mb-6">

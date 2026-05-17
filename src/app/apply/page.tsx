@@ -76,14 +76,14 @@ export default function Apply() {
   }
 
   return (
-    <main className="min-h-screen bg-[#0A0A0A]">
+    <main className="min-h-screen bg-[#0A0A0A] overflow-x-hidden">
       <Navbar />
 
-      <section className="pt-40 pb-16 px-6 relative overflow-hidden">
+      <section className="pt-28 md:pt-36 lg:pt-40 pb-12 md:pb-16 px-4 md:px-8 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#C9A14A]/5 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="container mx-auto max-w-5xl relative z-10 text-center">
           <p className="text-[#C9A14A] tracking-[0.3em] uppercase text-xs font-bold mb-4">Where Prestige Meets Lifestyle</p>
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">Membership Application</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-5">Membership Application</h1>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
             Join an exclusive community of elite individuals. Please complete the application below for our membership committee&apos;s review.
           </p>
@@ -94,7 +94,7 @@ export default function Apply() {
         </div>
       </section>
 
-      <section className="pb-32 px-6">
+      <section className="pb-20 md:pb-32 px-4 md:px-8">
         <div className="container mx-auto max-w-5xl">
           <form onSubmit={handleSubmit} className="space-y-12">
             

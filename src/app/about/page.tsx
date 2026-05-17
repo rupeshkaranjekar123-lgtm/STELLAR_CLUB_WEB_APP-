@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
@@ -120,10 +120,10 @@ export default function About() {
       </section>
 
       {/* Our Story - Image + Text */}
-      <section className="py-32 px-6 bg-[#0A0A0A]">
+      <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-12 bg-[#0A0A0A]">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[550px] overflow-hidden">
+            <div className="relative h-[280px] sm:h-[380px] md:h-[550px] overflow-hidden">
               <img
                 src="/images/reception.jpg"
                 alt="The Stellaar Reception"
@@ -157,17 +157,17 @@ export default function About() {
       </section>
 
       {/* Founder's Message */}
-      <section className="py-24 px-6 bg-black relative overflow-hidden">
+      <section className="py-14 md:py-24 px-4 md:px-8 lg:px-12 bg-black relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#C9A14A]/5 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-5 relative">
-              <div className="relative h-[600px] w-full border border-[#C9A14A]/20 p-4">
+              <div className="relative h-[300px] sm:h-[420px] md:h-[550px] lg:h-[600px] w-full border border-[#C9A14A]/20 p-3 md:p-4">
                 <img src="/images/gallery-2.jpg" alt="Founder" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-[#0A0A0A] border border-[#C9A14A]/30 p-6 shadow-2xl">
-                <p className="text-[#C9A14A] font-serif text-2xl">Arun Deshmukh</p>
-                <p className="text-white/50 text-xs uppercase tracking-widest mt-1">Founder & Visionary</p>
+              <div className="absolute -bottom-5 -right-5 sm:-bottom-6 sm:-right-6 bg-[#0A0A0A] border border-[#C9A14A]/30 p-4 md:p-6 shadow-2xl z-10">
+                <p className="text-[#C9A14A] font-serif text-lg md:text-2xl">Arun Deshmukh</p>
+                <p className="text-white/50 text-[10px] md:text-xs uppercase tracking-widest mt-1">Founder &amp; Visionary</p>
               </div>
             </div>
             <div className="lg:col-span-7 space-y-8 relative z-10">
@@ -196,8 +196,8 @@ export default function About() {
 
       {/* 3-image mosaic */}
       <section className="py-0 bg-black">
-        <div className="grid grid-cols-1 md:grid-cols-3 h-[500px]">
-          <div className="relative overflow-hidden group">
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="relative h-[220px] sm:h-[280px] md:h-[500px] overflow-hidden group">
             <img src="/images/pool.jpg" alt="Luxury Pool" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-700 flex items-end p-8">
               <div>
@@ -206,7 +206,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="relative overflow-hidden group">
+          <div className="relative h-[220px] sm:h-[280px] md:h-[500px] overflow-hidden group">
             <img src="/images/dining.jpg" alt="Fine Dining" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-700 flex items-end p-8">
               <div>
@@ -215,7 +215,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="relative overflow-hidden group">
+          <div className="relative h-[220px] sm:h-[280px] md:h-[500px] overflow-hidden group">
             <img src="/images/gym.jpg" alt="Fitness Center" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-700 flex items-end p-8">
               <div>
@@ -258,7 +258,7 @@ export default function About() {
       </section>
 
       {/* Family & Community - Image + Text */}
-      <section className="py-32 px-6 bg-black">
+      <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-12 bg-black">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 order-2 lg:order-1">
@@ -287,7 +287,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[550px] overflow-hidden order-1 lg:order-2">
+            <div className="relative h-[280px] sm:h-[380px] md:h-[550px] overflow-hidden order-1 lg:order-2">
               <img
                 src="/images/family.jpg"
                 alt="Family at The Stellaar"
@@ -301,7 +301,7 @@ export default function About() {
       </section>
 
       {/* Affiliation Banner */}
-      <section className="py-20 px-6 bg-[#0A0A0A] border-t border-b border-white/5">
+      <section className="py-14 md:py-20 px-4 md:px-8 bg-[#0A0A0A] border-t border-b border-white/5">
         <div className="container mx-auto max-w-5xl text-center">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16">
             <div className="text-center">
@@ -317,7 +317,7 @@ export default function About() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-32 px-6 bg-black text-center relative overflow-hidden">
+      <section className="py-16 md:py-28 px-4 md:px-8 bg-black text-center relative overflow-hidden">
         <div className="absolute inset-0">
           <img src="/images/membership.jpg" alt="Membership" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-black/70"></div>
