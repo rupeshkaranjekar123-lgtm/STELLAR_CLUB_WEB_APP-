@@ -228,7 +228,7 @@ export default function Amenities() {
             <span className="text-shimmer block sm:inline mt-1 sm:mt-0">AS A MEMBER</span>
           </h2>
           <p className="text-white/55 text-sm md:text-base font-light max-w-xl mx-auto mb-10 leading-relaxed">
-            Become part of Nagpur's most exclusive family club and enjoy unlimited access to
+            Become part of Nagpur&apos;s most exclusive family club and enjoy unlimited access to
             every world-class facility — reserved for just 100 distinguished families.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

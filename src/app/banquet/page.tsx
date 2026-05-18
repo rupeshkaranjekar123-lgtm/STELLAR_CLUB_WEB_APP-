@@ -28,7 +28,7 @@ export default function Banquet() {
             Grand Celebrations <br className="hidden md:block"/> at <span className="text-[#C9A14A]">Stellaar</span>
           </h1>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10">
-            Nagpur's premier event destination for luxurious weddings, corporate galas, and intimate family gatherings.
+            Nagpur&apos;s premier event destination for luxurious weddings, corporate galas, and intimate family gatherings.
           </p>
           <Link
             href="#quote"

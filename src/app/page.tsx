@@ -495,7 +495,7 @@ export default function Home() {
                   <h3 className="font-cormorant italic normal-case text-[#C9A14A] text-2xl md:text-3xl mb-4 tracking-wide">Unforgettable Celebrations</h3>
                   <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl text-white tracking-widest leading-snug mb-6">HOST GRAND<br />EVENTS</h2>
                   <p className="text-white/70 font-light max-w-sm mx-auto leading-relaxed text-sm md:text-base">
-                    Celebrate life's special moments in our premium banquet halls, designed for memorable experiences.
+                    Celebrate life&apos;s special moments in our premium banquet halls, designed for memorable experiences.
                   </p>
 
                   <Link href="/banquet" className="mt-8 px-8 py-3.5 border border-[#C9A14A] text-[#C9A14A] bg-black/40 uppercase tracking-[0.2em] text-[10px] font-semibold hover:bg-[#C9A14A] hover:text-black transition-all duration-500 flex items-center gap-2 group/btn rounded-sm">

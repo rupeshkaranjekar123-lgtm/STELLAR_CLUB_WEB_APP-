@@ -26,7 +26,7 @@ export default function Apply() {
   const [appId, setAppId] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value, type } = e.target as any;
+    const { name, value, type } = e.target;
     const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
     setFormData(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
   };
