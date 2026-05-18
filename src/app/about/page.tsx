@@ -173,14 +173,14 @@ export default function About() {
             <div className="lg:col-span-7 space-y-8 relative z-10">
               <p className="text-[#C9A14A] tracking-[0.2em] uppercase text-xs font-bold">A Message From The Founder</p>
               <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight">
-                &ldquo;We wanted to build a sanctuary where success meets family.&rdquo;
+                "We wanted to build a sanctuary where success meets family."
               </h2>
               <div className="space-y-5 text-white/60 font-light text-lg leading-relaxed">
                 <p>
                   For years, Nagpur lacked a true world-class destination where distinguished families could gather, celebrate, and unwind without compromising on luxury or privacy. The Stellaar was born out of this necessity.
                 </p>
                 <p>
-                  It&apos;s not just a club; it&apos;s a legacy project. We designed every square foot to foster community, ensure safety for our children, and provide an environment where lifelong memories are created.
+                  It's not just a club; it's a legacy project. We designed every square foot to foster community, ensure safety for our children, and provide an environment where lifelong memories are created.
                 </p>
                 <p>
                   My family and I welcome you to experience a new standard of living. This is your home away from home.
