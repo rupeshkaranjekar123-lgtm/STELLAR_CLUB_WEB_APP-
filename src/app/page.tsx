@@ -62,10 +62,6 @@ export default function Home() {
             </span>
           </h1>
 
-          {/* Supporting Text */}
-          <p className="font-cormorant italic text-white/80 text-base sm:text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light tracking-[0.12em] leading-relaxed px-4 fade-in delay-200">
-            Where luxury, lifestyle, networking, and unforgettable family moments come together.
-          </p>
 
           {/* Buttons Row */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto px-4 fade-in delay-300">
@@ -75,14 +71,6 @@ export default function Home() {
             >
               Apply for Membership <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <a
-              href="https://wa.me/917888005995"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group px-8 py-4 border border-[#25D366]/40 text-[#25D366] hover:border-[#25D366] hover:bg-[#25D366]/5 transition-all duration-500 uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold w-full sm:w-auto text-center backdrop-blur-sm rounded-sm hover:scale-105 flex items-center justify-center gap-2"
-            >
-              WhatsApp Now
-            </a>
           </div>
 
 
@@ -758,8 +746,8 @@ export default function Home() {
                     >
                       Reforms Club Amravati
                     </h3>
-                     <p className="text-white/50 text-xs sm:text-sm mt-2 max-w-md leading-relaxed">
-                  
+                    <p className="text-white/50 text-xs sm:text-sm mt-2 max-w-md leading-relaxed">
+
                     </p>
                   </div>
                 </div>
